@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --color-navy: #0f2437;
+  --color-navy-2: #173854;
+  --color-accent: #d5aa61;
+  --color-accent-dark: #b98735;
+  --color-blue: #2f6f9f;
+  --color-text: #18202a;
+  --color-muted: #5e6978;
+  --color-soft: #f6f8fb;
+  --color-cream: #fbf8f1;
+  --color-white: #ffffff;
+  --color-border: #dfe5ec;
+  --color-danger: #b42318;
+  --color-success: #146c43;
+  --shadow-sm: 0 12px 30px rgba(15, 36, 55, 0.08);
+  --shadow-md: 0 24px 60px rgba(15, 36, 55, 0.13);
+  --radius-sm: 12px;
+  --radius-md: 18px;
+  --radius-lg: 26px;
+  --container: 1180px;
+  --section: 72px;
+  --section-lg: 96px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: var(--color-text);
+  background: var(--color-white);
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--color-navy);
+  letter-spacing: -0.035em;
+  line-height: 1.08;
+}
+
+h1 {
+  font-size: clamp(2.35rem, 8vw, 4.8rem);
+  margin-bottom: 1.1rem;
+}
+
+h2 {
+  font-size: clamp(1.75rem, 4vw, 3rem);
+  margin-bottom: 0.9rem;
+}
+
+h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.55rem;
+}
+
+p {
+  color: var(--color-muted);
+  margin-bottom: 1rem;
+}
+
+ul,
+ol {
+  margin-top: 0;
+}
+
+::selection {
+  background: rgba(213, 170, 97, 0.35);
+}
+
+.container {
+  width: min(100% - 32px, var(--container));
+  margin-inline: auto;
+}
+
+.narrow {
+  max-width: 860px;
+}
+
+.section {
+  padding: var(--section) 0;
+}
+
+.section-lg {
+  padding: var(--section-lg) 0;
+}
+
+.soft-section {
+  background: var(--color-soft);
+}
+
+.eyebrow {
+  color: var(--color-accent-dark);
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  margin-bottom: 0.8rem;
+}
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 8px;
+  z-index: 100;
+  background: var(--color-navy);
+  color: var(--color-white);
+  padding: 0.7rem 1rem;
+  border-radius: var(--radius-sm);
+}
+
+.skip-link:focus {
+  left: 16px;
+}
+
+.site-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+.full-width {
+  width: 100%;
+}
+

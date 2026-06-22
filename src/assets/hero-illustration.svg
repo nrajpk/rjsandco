@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 520" role="img" aria-label="Professional financial advisory illustration">
+  <rect width="720" height="520" rx="34" fill="#f7f3ea" />
+  <circle cx="590" cy="96" r="68" fill="#e9d8b8" opacity="0.75" />
+  <circle cx="104" cy="430" r="92" fill="#e5edf5" opacity="0.95" />
+  <rect x="84" y="90" width="552" height="342" rx="24" fill="#ffffff" stroke="#d8dee8" stroke-width="2" />
+  <rect x="126" y="132" width="180" height="28" rx="8" fill="#0f2437" />
+  <rect x="126" y="178" width="268" height="14" rx="7" fill="#b9c3cf" />
+  <rect x="126" y="205" width="218" height="14" rx="7" fill="#d7dde5" />
+  <rect x="126" y="250" width="132" height="92" rx="18" fill="#f9fafb" stroke="#d8dee8" />
+  <rect x="294" y="250" width="132" height="92" rx="18" fill="#f9fafb" stroke="#d8dee8" />
+  <rect x="462" y="250" width="132" height="92" rx="18" fill="#f9fafb" stroke="#d8dee8" />
+  <path d="M154 310l28-34 25 20 31-42" fill="none" stroke="#d5aa61" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M324 314h72M324 292h48M324 270h66" stroke="#0f2437" stroke-width="8" stroke-linecap="round" />
+  <path d="M492 308l23 20 46-62" fill="none" stroke="#2f6f9f" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
+  <rect x="126" y="376" width="214" height="18" rx="9" fill="#d5aa61" opacity="0.95" />
+  <rect x="362" y="376" width="132" height="18" rx="9" fill="#d7dde5" />
+  <path d="M540 128c26 16 44 43 44 74 0 49-40 89-89 89-31 0-58-16-74-40" fill="none" stroke="#0f2437" stroke-width="12" stroke-linecap="round" opacity="0.12" />
+</svg>
