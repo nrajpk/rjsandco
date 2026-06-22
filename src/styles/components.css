@@ -8,11 +8,21 @@
   border: 1px solid transparent;
   font-weight: 800;
   line-height: 1;
-  transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease, border 180ms ease;
+  transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease, border 180ms ease, color 180ms ease;
 }
 
 .btn:hover {
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.72;
+  transform: none;
 }
 
 .btn-primary {
@@ -23,6 +33,7 @@
 
 .btn-primary:hover {
   background: #e0b96e;
+  box-shadow: 0 16px 30px rgba(213, 170, 97, 0.34);
 }
 
 .btn-secondary {
@@ -52,12 +63,23 @@
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
+  width: fit-content;
+  transition: color 180ms ease;
 }
 
 .text-link::after {
   content: '›';
   color: var(--color-accent-dark);
   font-size: 1.25rem;
+  transition: transform 180ms ease;
+}
+
+.text-link:hover {
+  color: var(--color-accent-dark);
+}
+
+.text-link:hover::after {
+  transform: translateX(3px);
 }
 
 .section-heading {
@@ -86,12 +108,30 @@
   border-radius: var(--radius-md);
   padding: 1.35rem;
   box-shadow: var(--shadow-sm);
+  transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease, background 220ms ease;
 }
 
 .service-card {
   min-height: 255px;
   display: flex;
   flex-direction: column;
+  animation: fadeUp 520ms ease both;
+}
+
+.service-card:hover,
+.feature-card:hover,
+.resource-card:hover,
+.category-card:hover,
+.value-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(213, 170, 97, 0.72);
+  box-shadow: var(--shadow-md);
+}
+
+.service-card:hover .service-initial {
+  background: var(--color-navy);
+  color: var(--color-white);
+  border-color: var(--color-navy);
 }
 
 .service-card p {
@@ -118,6 +158,7 @@
   font-size: 0.78rem;
   font-weight: 900;
   border: 1px solid rgba(213, 170, 97, 0.35);
+  transition: background 220ms ease, color 220ms ease, border-color 220ms ease;
 }
 
 .feature-card span,
@@ -214,6 +255,12 @@
   border-radius: var(--radius-md);
   background: var(--color-white);
   overflow: hidden;
+  transition: border-color 200ms ease, box-shadow 200ms ease;
+}
+
+.faq-item:hover {
+  border-color: rgba(213, 170, 97, 0.62);
+  box-shadow: var(--shadow-sm);
 }
 
 .faq-question {
@@ -228,9 +275,15 @@
   color: var(--color-navy);
   font-weight: 850;
   text-align: left;
+  transition: background 180ms ease;
+}
+
+.faq-question:hover {
+  background: rgba(251, 248, 241, 0.8);
 }
 
 .faq-icon {
+  position: relative;
   width: 28px;
   height: 28px;
   flex: 0 0 28px;
@@ -240,15 +293,46 @@
   border-radius: 50%;
   background: var(--color-cream);
   color: var(--color-navy);
+  transition: background 180ms ease, transform 220ms ease;
+}
+
+.faq-icon span {
+  position: absolute;
+  width: 12px;
+  height: 2px;
+  border-radius: 99px;
+  background: currentColor;
+  transition: transform 220ms ease, opacity 180ms ease;
+}
+
+.faq-icon span:nth-child(2) {
+  transform: rotate(90deg);
+}
+
+.faq-question[aria-expanded='true'] .faq-icon {
+  background: var(--color-navy);
+  color: var(--color-white);
+  transform: rotate(180deg);
+}
+
+.faq-question[aria-expanded='true'] .faq-icon span:nth-child(2) {
+  opacity: 0;
 }
 
 .faq-answer {
-  display: none;
-  padding: 0 1.15rem 1rem;
+  display: grid;
+  grid-template-rows: 0fr;
+  padding: 0 1.15rem;
+  transition: grid-template-rows 240ms ease, padding-bottom 240ms ease;
 }
 
 .faq-answer.is-open {
-  display: block;
+  grid-template-rows: 1fr;
+  padding-bottom: 1rem;
+}
+
+.faq-answer > p {
+  overflow: hidden;
 }
 
 .faq-answer p {
@@ -342,6 +426,7 @@
   background: var(--color-white);
   color: var(--color-text);
   outline: none;
+  transition: border-color 180ms ease, box-shadow 180ms ease, background 180ms ease;
 }
 
 .contact-form input:focus,
@@ -354,12 +439,18 @@
 .contact-form small {
   color: var(--color-danger);
   font-weight: 700;
+  animation: fadeUp 180ms ease both;
+}
+
+.contact-form .btn {
+  justify-self: start;
 }
 
 .form-success {
   color: var(--color-success);
   font-weight: 800;
   margin-bottom: 0;
+  animation: fadeUp 220ms ease both;
 }
 
 .contact-details {
@@ -374,6 +465,11 @@
 .contact-card a {
   color: var(--color-navy);
   font-weight: 800;
+  transition: color 180ms ease;
+}
+
+.contact-card a:hover {
+  color: var(--color-accent-dark);
 }
 
 .map-placeholder {
@@ -430,11 +526,77 @@
   font-weight: 900;
   box-shadow: 0 18px 35px rgba(31, 157, 85, 0.35);
   z-index: 45;
+  transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+}
+
+.whatsapp-button:hover {
+  transform: translateY(-3px);
+  background: #168447;
+  box-shadow: 0 22px 42px rgba(31, 157, 85, 0.42);
+}
+
+.whatsapp-button:active {
+  transform: translateY(0);
 }
 
 .not-found {
   min-height: 62vh;
   display: flex;
   align-items: center;
+}
+
+
+.service-grid .service-card:nth-child(2),
+.card-grid .service-card:nth-child(2),
+.feature-grid > *:nth-child(2),
+.mini-grid > *:nth-child(2),
+.category-grid > *:nth-child(2),
+.process-grid > *:nth-child(2),
+.value-grid > *:nth-child(2) {
+  animation-delay: 60ms;
+}
+
+.service-grid .service-card:nth-child(3),
+.card-grid .service-card:nth-child(3),
+.feature-grid > *:nth-child(3),
+.mini-grid > *:nth-child(3),
+.category-grid > *:nth-child(3),
+.process-grid > *:nth-child(3),
+.value-grid > *:nth-child(3) {
+  animation-delay: 120ms;
+}
+
+.feature-card,
+.mini-card,
+.category-card,
+.resource-card,
+.value-card,
+.process-grid article,
+.detail-section,
+.contact-panel,
+.contact-card,
+.cta-box {
+  animation: fadeUp 520ms ease both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .btn:hover,
+  .service-card:hover,
+  .feature-card:hover,
+  .resource-card:hover,
+  .category-card:hover,
+  .value-card:hover,
+  .whatsapp-button:hover {
+    transform: none;
+  }
 }
 

@@ -27,6 +27,7 @@ export default function ContactForm() {
   const [form, setForm] = useState(initialForm);
   const [errors, setErrors] = useState({});
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   function handleChange(event) {
     const { name, value } = event.target;
@@ -41,8 +42,13 @@ export default function ContactForm() {
     setErrors(nextErrors);
 
     if (Object.keys(nextErrors).length === 0) {
-      setSubmitted(true);
-      setForm(initialForm);
+      setIsSubmitting(true);
+
+      window.setTimeout(() => {
+        setSubmitted(true);
+        setForm(initialForm);
+        setIsSubmitting(false);
+      }, 450);
     }
   }
 
@@ -96,8 +102,8 @@ export default function ContactForm() {
         {errors.message && <small>{errors.message}</small>}
       </label>
 
-      <button className="btn btn-primary" type="submit">
-        Submit Enquiry
+      <button className="btn btn-primary" type="submit" disabled={isSubmitting}>
+        {isSubmitting ? 'Checking details...' : 'Submit Enquiry'}
       </button>
 
       {submitted && (

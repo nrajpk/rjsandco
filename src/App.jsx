@@ -7,7 +7,6 @@ import Services from './pages/Services.jsx';
 import ServiceDetail from './pages/ServiceDetail.jsx';
 import Industries from './pages/Industries.jsx';
 import Resources from './pages/Resources.jsx';
-import Careers from './pages/Careers.jsx';
 import Contact from './pages/Contact.jsx';
 import PrivacyPolicy from './pages/PrivacyPolicy.jsx';
 import Disclaimer from './pages/Disclaimer.jsx';
@@ -35,7 +34,6 @@ export default function App() {
           <Route path="services/:slug" element={<ServiceDetail />} />
           <Route path="industries" element={<Industries />} />
           <Route path="resources" element={<Resources />} />
-          <Route path="careers" element={<Careers />} />
           <Route path="contact" element={<Contact />} />
           <Route path="privacy-policy" element={<PrivacyPolicy />} />
           <Route path="disclaimer" element={<Disclaimer />} />

@@ -19,7 +19,10 @@ export default function FAQAccordion({ items }) {
               onClick={() => setOpenIndex(isOpen ? -1 : index)}
             >
               <span>{item.question}</span>
-              <span className="faq-icon" aria-hidden="true">{isOpen ? '−' : '+'}</span>
+              <span className="faq-icon" aria-hidden="true">
+                <span />
+                <span />
+              </span>
             </button>
             <div id={answerId} className={`faq-answer ${isOpen ? 'is-open' : ''}`}>
               <p>{item.answer}</p>

@@ -46,7 +46,6 @@ rjsandco-react-website/
       ServiceDetail.jsx
       Industries.jsx
       Resources.jsx
-      Careers.jsx
       Contact.jsx
       PrivacyPolicy.jsx
       Disclaimer.jsx
@@ -201,3 +200,20 @@ For stronger SEO later, migrate or pre-render the site using one of these approa
 - Static site generation
 
 For now, this website keeps the architecture simple and maintainable.
+
+
+## Micro-interactions added
+
+This version includes lightweight, professional micro-interactions using CSS and small React state only. No animation library or new dependency was added.
+
+- Sticky header shadow after scroll
+- Animated active navigation underline
+- Mobile menu slide/fade transition
+- Hamburger-to-close icon transition
+- Button hover, active, disabled, and focus-visible states
+- Service/card hover lift with border accent
+- CTA and section fade-up entrance polish
+- Smooth FAQ open/close animation
+- Form focus states, error reveal, and submit feedback state
+- WhatsApp and footer link hover states
+- `prefers-reduced-motion` safety for users who disable animations

@@ -5,14 +5,26 @@ import { navLinks, siteConfig } from '../data/siteConfig.js';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
     setIsOpen(false);
   }, [location.pathname]);
 
+  useEffect(() => {
+    function handleScroll() {
+      setIsScrolled(window.scrollY > 8);
+    }
+
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <header className="site-header">
+    <header className={`site-header ${isScrolled ? 'is-scrolled' : ''}`}>
       <a className="skip-link" href="#main-content">
         Skip to content
       </a>
@@ -22,9 +34,9 @@ export default function Header() {
         </Link>
 
         <button
-          className="menu-toggle"
+          className={`menu-toggle ${isOpen ? 'is-open' : ''}`}
           type="button"
-          aria-label="Toggle navigation menu"
+          aria-label={isOpen ? 'Close navigation menu' : 'Open navigation menu'}
           aria-expanded={isOpen}
           onClick={() => setIsOpen((current) => !current)}
         >
