@@ -82,7 +82,7 @@
 
   .nav-link.active,
   .nav-link:hover {
-    background: var(--color-cream);
+    background: var(--color-green-soft);
   }
 
   .nav-cta {

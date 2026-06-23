@@ -1,15 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
 :root {
-  --color-navy: #0f2437;
-  --color-navy-2: #173854;
-  --color-accent: #1f7a4d;
---color-accent-dark: #145c39;
-  --color-blue: #2f6f9f;
-  --color-text: #18202a;
-  --color-muted: #5e6978;
-  --color-soft: #f6f8fb;
-  --color-cream: #fbf8f1;
+  --color-navy: #0b1f33;
+  --color-navy-2: #123a5a;
+  --color-accent: #16835a;
+  --color-accent-dark: #0f5f41;
+  --color-blue: #256fa6;
+  --color-blue-dark: #174f7d;
+  --color-blue-soft: #eef7fc;
+  --color-green-soft: #edf8f2;
+  --color-text: #17212d;
+  --color-muted: #5b6878;
+  --color-soft: #f4f8fb;
+  --color-cream: #f4faf7;
   --color-white: #ffffff;
   --color-border: #dfe5ec;
   --color-danger: #b42318;
@@ -105,7 +108,7 @@ ol {
 }
 
 ::selection {
-  background: rgba(213, 170, 97, 0.35);
+  background: rgba(22, 131, 90, 0.26);
 }
 
 .container {
@@ -169,7 +172,7 @@ main {
 
 
 :focus-visible {
-  outline: 3px solid rgba(213, 170, 97, 0.42);
+  outline: 3px solid rgba(22, 131, 90, 0.36);
   outline-offset: 3px;
 }
 
