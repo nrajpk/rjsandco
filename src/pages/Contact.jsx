@@ -16,7 +16,7 @@ export default function Contact() {
           <p className="eyebrow">Contact</p>
           <h1>Book a consultation with RJS & Co.</h1>
           <p>
-            Share your requirement, deadline, and current compliance status. The form is front-end only and must be connected to email, CRM, or a form service before launch.
+            Share your requirement, deadline, and current compliance status. The form opens your email app with the enquiry details filled in.
           </p>
         </div>
       </section>
@@ -37,9 +37,17 @@ export default function Contact() {
               <p><strong>Phone:</strong> <a href={siteConfig.phoneHref}>{siteConfig.phone}</a></p>
               <p><strong>WhatsApp:</strong> {siteConfig.whatsappLabel}</p>
             </div>
-            <div className="map-placeholder" role="img" aria-label="Google map placeholder">
-              <span>{siteConfig.mapLabel}</span>
-              <small>Replace this block with verified Google Maps embed code before launch.</small>
+            <div className="map-preview">
+              <iframe
+                title="RJS & Co. office location on Google Maps"
+                src={siteConfig.mapEmbedHref}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                allowFullScreen
+              />
+              <a href={siteConfig.mapHref} target="_blank" rel="noreferrer">
+                {siteConfig.mapLabel}
+              </a>
             </div>
           </aside>
         </div>
@@ -47,4 +55,3 @@ export default function Contact() {
     </>
   );
 }
-

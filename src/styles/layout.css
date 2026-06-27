@@ -92,7 +92,7 @@
 }
 
 .menu-toggle:hover {
-  border-color: rgba(22, 131, 90, 0.58);
+  border-color: rgba(37, 211, 102, 0.58);
   box-shadow: var(--shadow-sm);
 }
 
@@ -118,7 +118,7 @@
 
 .hero {
   background:
-    radial-gradient(circle at top left, rgba(22, 131, 90, 0.15), transparent 34%),
+    radial-gradient(circle at top left, rgba(37, 211, 102, 0.15), transparent 34%),
     radial-gradient(circle at 84% 18%, rgba(37, 111, 166, 0.14), transparent 36%),
     linear-gradient(180deg, #ffffff 0%, var(--color-cream) 100%);
   overflow: hidden;
@@ -189,7 +189,7 @@
 
 .page-hero {
   background:
-    radial-gradient(circle at top right, rgba(22, 131, 90, 0.34), transparent 32%),
+    radial-gradient(circle at top right, rgba(37, 211, 102, 0.34), transparent 32%),
     linear-gradient(135deg, rgba(11, 31, 51, 0.97), rgba(18, 58, 90, 0.96));
   color: var(--color-white);
 }
@@ -363,4 +363,3 @@
   gap: 1rem;
   flex-wrap: wrap;
 }
-

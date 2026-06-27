@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { siteConfig } from '../data/siteConfig.js';
 import { services } from '../data/services.js';
 
 const initialForm = {
@@ -44,11 +45,21 @@ export default function ContactForm() {
     if (Object.keys(nextErrors).length === 0) {
       setIsSubmitting(true);
 
-      window.setTimeout(() => {
-        setSubmitted(true);
-        setForm(initialForm);
-        setIsSubmitting(false);
-      }, 450);
+      const subject = `Website enquiry: ${form.service}`;
+      const body = [
+        `Name: ${form.name}`,
+        `Phone: ${form.phone}`,
+        `Email: ${form.email}`,
+        `Service required: ${form.service}`,
+        '',
+        'Message:',
+        form.message
+      ].join('\n');
+
+      window.location.href = `${siteConfig.emailHref}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      setSubmitted(true);
+      setForm(initialForm);
+      setIsSubmitting(false);
     }
   }
 
@@ -108,10 +119,9 @@ export default function ContactForm() {
 
       {submitted && (
         <p className="form-success" role="status">
-          Your enquiry has been validated on the front end. Connect this form to email or a CRM before going live.
+          Your email app should open with the enquiry details filled in. Please send the email to complete your enquiry.
         </p>
       )}
     </form>
   );
 }
-

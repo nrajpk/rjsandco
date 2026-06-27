@@ -5,18 +5,21 @@ export const siteConfig = {
   tagline: 'Chartered Accountants, Tax Consultants and Business Advisors',
   description:
     'RJS & Co. provides audit, taxation, GST, accounting, ROC compliance, business setup, payroll, Virtual CFO, NRI taxation, and advisory support for Indian businesses, startups, MSMEs, professionals, and NRIs.',
-  address: '[Office Address Placeholder]',
-  city: '[City Placeholder]',
-  state: '[State Placeholder]',
-  postalCode: '[PIN Placeholder]',
+  address: '2nd Floor, Ashir Bhavan Lane, P. C. Chambers, Banerji Road, Kacheripady, Ernakulam - 682018',
+  city: 'Ernakulam',
+  state: 'Kerala',
+  postalCode: '682018',
   country: 'India',
   phone: '[Phone Number Placeholder]',
   phoneHref: 'tel:+910000000000',
-  email: '[Email Address Placeholder]',
-  emailHref: 'mailto:info@rjsandco.in',
-  whatsappNumber: '910000000000',
-  whatsappLabel: '[WhatsApp Number Placeholder]',
-  mapLabel: '[Google Map Placeholder]',
+  email: 'contact@rjsllp.com',
+  emailHref: 'mailto:contact@rjsllp.com',
+  whatsappNumber: '971551070078',
+  whatsappLabel: '+971 55 107 0078',
+  mapLabel: 'Open RJS & Co. on Google Maps',
+  mapHref: 'https://maps.app.goo.gl/Dwv51ejpE7YBj5q37',
+  mapEmbedHref:
+    'https://www.google.com/maps?q=2nd%20Floor%2C%20Ashir%20Bhavan%20Lane%2C%20P.%20C.%20Chambers%2C%20Banerji%20Road%2C%20Kacheripady%2C%20Ernakulam%20682018&output=embed',
   consultationPath: '/contact',
   copyrightStartYear: '2026',
   externalLinks: [
@@ -34,4 +37,3 @@ export const navLinks = [
   { label: 'Resources', path: '/resources' },
   { label: 'Contact', path: '/contact' }
 ];
-

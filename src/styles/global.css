@@ -3,12 +3,12 @@
 :root {
   --color-navy: #0b1f33;
   --color-navy-2: #123a5a;
-  --color-accent: #16835a;
-  --color-accent-dark: #0f5f41;
+  --color-accent: #25d366;
+  --color-accent-dark: #128c7e;
   --color-blue: #256fa6;
   --color-blue-dark: #174f7d;
   --color-blue-soft: #eef7fc;
-  --color-green-soft: #edf8f2;
+  --color-green-soft: #e9fbf0;
   --color-text: #17212d;
   --color-muted: #5b6878;
   --color-soft: #f4f8fb;
@@ -108,7 +108,7 @@ ol {
 }
 
 ::selection {
-  background: rgba(22, 131, 90, 0.26);
+  background: rgba(37, 211, 102, 0.26);
 }
 
 .container {
@@ -172,7 +172,7 @@ main {
 
 
 :focus-visible {
-  outline: 3px solid rgba(22, 131, 90, 0.36);
+  outline: 3px solid rgba(37, 211, 102, 0.36);
   outline-offset: 3px;
 }
 
@@ -186,4 +186,3 @@ main {
     transform: translateY(0);
   }
 }
-
