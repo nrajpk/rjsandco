@@ -7,7 +7,7 @@ import FAQAccordion from '../components/FAQAccordion.jsx';
 import CTASection from '../components/CTASection.jsx';
 import { generalFaqs } from '../data/faqs.js';
 import { industries } from '../data/industries.js';
-import { services } from '../data/services.js';
+import { serviceCategories, services } from '../data/services.js';
 import { siteConfig } from '../data/siteConfig.js';
 
 export default function Home() {
@@ -48,9 +48,12 @@ export default function Home() {
         primaryPath="/contact"
         secondaryLabel="View Services"
         secondaryPath="/services"
+        sideEyebrow="What we cover"
+        sideNote="Need help with tax, GST, audit, or ROC? Share your requirement and get a clear next step."
+        sideItems={serviceCategories}
       />
 
-      <section className="section intro-strip">
+      <section className="section intro-strip section-rule">
         <div className="container split-grid">
           <div>
             <p className="eyebrow">About the firm</p>

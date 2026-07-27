@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import heroIllustration from '../assets/hero-illustration.svg';
 
 export default function Hero({
   eyebrow,
@@ -9,7 +8,9 @@ export default function Hero({
   primaryPath = '/contact',
   secondaryLabel,
   secondaryPath,
-  showCard = true
+  sideEyebrow,
+  sideNote,
+  sideItems = []
 }) {
   return (
     <section className="hero section-lg">
@@ -30,17 +31,27 @@ export default function Hero({
           </div>
         </div>
 
-        <div className="hero-visual" aria-label="RJS & Co. advisory illustration">
-          <img src={heroIllustration} alt="Financial compliance and advisory dashboard illustration" />
-          {showCard && (
-            <div className="hero-card" aria-label="Consultation prompt">
-              <span>Need help with tax, GST, audit, or ROC?</span>
-              <strong>Share your requirement and get a clear next step.</strong>
-            </div>
-          )}
-        </div>
+        {sideItems.length > 0 && (
+          <div className="hero-panel" aria-label="Service overview">
+            {(sideEyebrow || sideNote) && (
+              <div className="hero-panel-top">
+                {sideEyebrow && <span>{sideEyebrow}</span>}
+                {sideNote && <strong>{sideNote}</strong>}
+              </div>
+            )}
+            <ul className="hero-index-list">
+              {sideItems.map((item) => (
+                <li key={item.name}>
+                  <div>
+                    <h3>{item.name}</h3>
+                    <p>{item.description}</p>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </div>
     </section>
   );
 }
-

@@ -1,30 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
 :root {
-  --color-navy: #0b1f33;
-  --color-navy-2: #123a5a;
-  --color-accent: #25d366;
-  --color-accent-dark: #128c7e;
-  --color-blue: #256fa6;
-  --color-blue-dark: #174f7d;
-  --color-blue-soft: #eef7fc;
-  --color-green-soft: #e9fbf0;
-  --color-text: #17212d;
-  --color-muted: #5b6878;
-  --color-soft: #f4f8fb;
-  --color-cream: #f4faf7;
-  --color-white: #ffffff;
-  --color-border: #dfe5ec;
-  --color-danger: #b42318;
-  --color-success: #146c43;
-  --shadow-sm: 0 12px 30px rgba(15, 36, 55, 0.08);
-  --shadow-md: 0 24px 60px rgba(15, 36, 55, 0.13);
-  --radius-sm: 12px;
-  --radius-md: 18px;
-  --radius-lg: 26px;
-  --container: 1180px;
-  --section: 72px;
-  --section-lg: 96px;
+  /* Neutrals */
+  --ink: #0b1220;
+  --ink-soft: #1c283b;
+  --paper: #ffffff;
+  --offwhite: #f4f5f1;
+  --line: #dde1e4;
+  --line-strong: #c1c8cc;
+  --text: #16202b;
+  --muted: #5a6570;
+  --muted-2: #99a2a9;
+
+  /* Brand accents */
+  --blue: #1d4e89;
+  --blue-deep: #123661;
+  --blue-tint: #eaf1f8;
+  --green: #0e7a54;
+  --green-deep: #0a5c3f;
+  --green-tint: #e6f5ee;
+  --whatsapp: #25d366;
+  --whatsapp-deep: #128c7e;
+
+  --danger: #b42318;
+  --success: #0e7a54;
+
+  --radius: 2px;
+
+  --container: 1200px;
+  --section: 88px;
+  --section-lg: 116px;
 }
 
 * {
@@ -38,9 +43,9 @@ html {
 body {
   margin: 0;
   font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  color: var(--color-text);
-  background: var(--color-white);
-  line-height: 1.6;
+  color: var(--text);
+  background: var(--paper);
+  line-height: 1.65;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
 }
@@ -77,28 +82,31 @@ p {
 h1,
 h2,
 h3 {
-  color: var(--color-navy);
-  letter-spacing: -0.035em;
-  line-height: 1.08;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+  line-height: 1.06;
+  font-weight: 700;
 }
 
 h1 {
-  font-size: clamp(2.35rem, 8vw, 4.8rem);
-  margin-bottom: 1.1rem;
+  font-size: clamp(2.5rem, 6vw, 4.9rem);
+  font-weight: 800;
+  margin-bottom: 1.2rem;
 }
 
 h2 {
-  font-size: clamp(1.75rem, 4vw, 3rem);
-  margin-bottom: 0.9rem;
+  font-size: clamp(1.8rem, 3.6vw, 2.7rem);
+  margin-bottom: 1rem;
 }
 
 h3 {
-  font-size: 1.1rem;
-  margin-bottom: 0.55rem;
+  font-size: 1.05rem;
+  margin-bottom: 0.6rem;
+  font-weight: 700;
 }
 
 p {
-  color: var(--color-muted);
+  color: var(--muted);
   margin-bottom: 1rem;
 }
 
@@ -108,7 +116,7 @@ ol {
 }
 
 ::selection {
-  background: rgba(37, 211, 102, 0.26);
+  background: rgba(29, 78, 137, 0.18);
 }
 
 .container {
@@ -129,16 +137,31 @@ ol {
 }
 
 .soft-section {
-  background: var(--color-soft);
+  background: var(--offwhite);
+}
+
+.section-rule {
+  border-top: 1px solid var(--line);
 }
 
 .eyebrow {
-  color: var(--color-accent-dark);
-  font-size: 0.78rem;
-  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  color: var(--blue);
+  font-size: 0.74rem;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.14em;
-  margin-bottom: 0.8rem;
+  letter-spacing: 0.16em;
+  margin-bottom: 0.9rem;
+}
+
+.eyebrow::before {
+  content: '';
+  width: 22px;
+  height: 2px;
+  background: var(--green);
+  flex: none;
 }
 
 .skip-link {
@@ -146,10 +169,10 @@ ol {
   left: -999px;
   top: 8px;
   z-index: 100;
-  background: var(--color-navy);
-  color: var(--color-white);
+  background: var(--ink);
+  color: var(--paper);
   padding: 0.7rem 1rem;
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius);
 }
 
 .skip-link:focus {
@@ -170,9 +193,8 @@ main {
   width: 100%;
 }
 
-
 :focus-visible {
-  outline: 3px solid rgba(37, 211, 102, 0.36);
+  outline: 2px solid var(--blue);
   outline-offset: 3px;
 }
 

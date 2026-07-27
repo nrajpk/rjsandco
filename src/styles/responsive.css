@@ -1,7 +1,7 @@
 @media (max-width: 1024px) {
   :root {
-    --section: 60px;
-    --section-lg: 78px;
+    --section: 68px;
+    --section-lg: 88px;
   }
 
   .hero-grid,
@@ -9,6 +9,10 @@
   .faq-preview,
   .contact-grid {
     grid-template-columns: 1fr;
+  }
+
+  .hero-grid {
+    gap: 2.5rem;
   }
 
   .hero-content {
@@ -52,10 +56,9 @@
     align-items: stretch;
     gap: 0.15rem;
     padding: 1rem;
-    background: var(--color-white);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-md);
-    box-shadow: var(--shadow-md);
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
@@ -73,7 +76,7 @@
   .nav-link {
     padding: 0.85rem;
     border-bottom: 0;
-    border-radius: var(--radius-sm);
+    border-radius: var(--radius);
   }
 
   .nav-link::after {
@@ -82,7 +85,7 @@
 
   .nav-link.active,
   .nav-link:hover {
-    background: var(--color-green-soft);
+    background: var(--offwhite);
   }
 
   .nav-cta {
@@ -101,26 +104,6 @@
 @media (max-width: 720px) {
   .container {
     width: min(100% - 24px, var(--container));
-  }
-
-  .hero-grid {
-    gap: 2rem;
-  }
-
-  .hero-card {
-    position: static;
-    margin-top: 1rem;
-  }
-
-  .card-grid,
-  .feature-grid,
-  .mini-grid,
-  .process-grid,
-  .value-grid,
-  .category-grid,
-  .detail-sidebar,
-  .form-grid {
-    grid-template-columns: 1fr;
   }
 
   .cta-box,
@@ -142,13 +125,28 @@
     width: 100%;
   }
 
+  .card-grid,
+  .feature-grid,
+  .mini-grid,
+  .process-grid,
+  .value-grid,
+  .category-grid,
+  .detail-sidebar,
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
   .footer-grid {
     grid-template-columns: 1fr;
   }
 
   .compliance-panel,
   .cta-box {
-    padding: 1.25rem;
+    padding: 1.5rem;
+  }
+
+  .hero-panel {
+    padding: 1.5rem;
   }
 
   .whatsapp-button {
@@ -161,25 +159,21 @@
 
 @media (max-width: 460px) {
   h1 {
-    font-size: 2.25rem;
+    font-size: 2.3rem;
   }
 
   .site-logo {
     width: 142px;
   }
 
-  .service-card,
-  .feature-card,
-  .mini-card,
-  .category-card,
   .resource-card,
-  .value-card,
   .sidebar-card,
   .contact-panel,
   .contact-card,
   .map-placeholder,
   .advisory-note,
-  .detail-section {
-    padding: 1rem;
+  .detail-section,
+  .faq-question {
+    padding: 1.1rem;
   }
 }
