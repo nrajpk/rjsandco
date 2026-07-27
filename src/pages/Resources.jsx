@@ -19,10 +19,10 @@ const updates = [
 ];
 
 const tools = [
-  'GST calculator placeholder',
-  'Income tax calculator placeholder',
-  'EMI calculator placeholder',
-  'Tax compliance calendar placeholder'
+  'GST calculator',
+  'Income tax calculator',
+  'EMI calculator',
+  'Compliance calendar'
 ];
 
 export default function Resources() {
@@ -39,7 +39,7 @@ export default function Resources() {
           <p className="eyebrow">Knowledge Bank</p>
           <h1>Practical tax and compliance resources for business owners.</h1>
           <p>
-            Use this section for blogs, tax updates, utility calculators, and compliance calendar content. Replace placeholders with reviewed articles before launch.
+            Straight answers on tax, GST, ROC, and NRI compliance -- written for people who need to act, not skim theory.
           </p>
         </div>
       </section>
@@ -49,7 +49,7 @@ export default function Resources() {
           <SectionHeading
             eyebrow="Insights"
             title="Featured updates"
-            description="Publish useful, specific, and regularly updated content here. Thin generic blogs will not help SEO or trust."
+            description="Short, specific answers to the questions that come up most before a first call."
           />
           <div className="card-grid">
             {updates.map((item) => (
@@ -68,9 +68,9 @@ export default function Resources() {
         <div className="container split-grid">
           <div>
             <p className="eyebrow">Utilities</p>
-            <h2>Calculators and compliance tools can be added later.</h2>
+            <h2>Calculators and a compliance calendar are on the way.</h2>
             <p>
-              These placeholders are included because calculators and calendars can improve usefulness and SEO, but they should be implemented carefully before launch.
+              Quick, no-login tools to check GST, estimate tax, and track filing deadlines.
             </p>
           </div>
           <div className="check-list">

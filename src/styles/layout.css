@@ -232,36 +232,11 @@
 }
 
 .page-hero {
-  background: var(--ink);
-  color: var(--paper);
-  position: relative;
-}
-
-.page-hero::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--blue), var(--green));
-}
-
-.page-hero h1,
-.page-hero p {
-  color: var(--paper);
-}
-
-.page-hero .eyebrow {
-  color: var(--green);
-}
-
-.page-hero .eyebrow::before {
-  background: var(--blue);
+  background: var(--paper);
+  border-bottom: 1px solid var(--line);
 }
 
 .page-hero p:not(.eyebrow) {
-  opacity: 0.78;
   font-size: 1.12rem;
 }
 

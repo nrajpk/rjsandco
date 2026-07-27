@@ -14,7 +14,6 @@ export default function PrivacyPolicy() {
         <div className="container narrow">
           <p className="eyebrow">Privacy Policy</p>
           <h1>How visitor and enquiry information is handled.</h1>
-          <p>This is a starter policy and should be reviewed legally before the website goes live.</p>
         </div>
       </section>
 

@@ -45,7 +45,6 @@ export default function Footer() {
           <h2 className="footer-title">Contact</h2>
           <address className="footer-contact">
             <span>{siteConfig.address}</span>
-            <a href={siteConfig.phoneHref}>{siteConfig.phone}</a>
             <a href={siteConfig.emailHref}>{siteConfig.email}</a>
             <span>{siteConfig.mapLabel}</span>
           </address>

@@ -34,7 +34,6 @@ export default function Contact() {
               <h2>Office details</h2>
               <p><strong>Address:</strong> {siteConfig.address}</p>
               <p><strong>Email:</strong> <a href={siteConfig.emailHref}>{siteConfig.email}</a></p>
-              <p><strong>Phone:</strong> <a href={siteConfig.phoneHref}>{siteConfig.phone}</a></p>
               <p><strong>WhatsApp:</strong> {siteConfig.whatsappLabel}</p>
             </div>
             <div className="map-preview">

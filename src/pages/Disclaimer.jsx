@@ -13,7 +13,6 @@ export default function Disclaimer() {
         <div className="container narrow">
           <p className="eyebrow">Disclaimer</p>
           <h1>Important information before using this website.</h1>
-          <p>This disclaimer is a starter version and should be reviewed before launch.</p>
         </div>
       </section>
 

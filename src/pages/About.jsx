@@ -31,9 +31,6 @@ export default function About() {
             <p>
               RJS & Co. is positioned for clients who want a dependable advisor for recurring compliance and important financial decisions. The firm combines technical CA services with a practical, business-first way of working.
             </p>
-            <p>
-              The website intentionally uses placeholders for address, phone, email, ICAI credentials, partner details, and registration information. Replace them only after verification before launch.
-            </p>
           </div>
         </div>
       </section>
