@@ -10,7 +10,7 @@ function placeholderFactsWarning() {
       const source = readFileSync(new URL('./src/data/firmFacts.js', import.meta.url), 'utf8');
       if (/FACTS_ARE_PLACEHOLDERS\s*=\s*true/.test(source)) {
         this.warn(
-          'src/data/firmFacts.js still holds placeholder credentials (FRN, partners, M. Nos., year). ' +
+          'src/data/firmFacts.js still holds placeholder credentials (FRN, year established, team size, peer review). ' +
             'Replace them before promotions go live, then set FACTS_ARE_PLACEHOLDERS = false.'
         );
       }

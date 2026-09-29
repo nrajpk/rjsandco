@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { services } from '../data/services.js';
-import { siteConfig, whatsappHref } from '../data/siteConfig.js';
+import { officeMapHref, siteConfig, whatsappHref } from '../data/siteConfig.js';
 import { firmFacts } from '../data/firmFacts.js';
 
 export default function Footer() {
@@ -14,14 +14,16 @@ export default function Footer() {
             <p className="site-footer__name">RJS &amp; Co.</p>
             <p className="site-footer__role">Chartered Accountants</p>
             <div className="site-footer__rule" />
-            <address>
-              {siteConfig.addressLines.map((line) => (
-                <span key={line}>
-                  {line}
-                  <br />
-                </span>
+            <div className="site-footer__offices">
+              {siteConfig.offices.map((office) => (
+                <address key={office.city}>
+                  <a className="site-footer__city" href={officeMapHref(office)} target="_blank" rel="noreferrer">
+                    {office.city}
+                  </a>
+                  {office.lines.join(', ')}
+                </address>
               ))}
-            </address>
+            </div>
           </div>
 
           <div>
@@ -63,11 +65,6 @@ export default function Footer() {
               <li>
                 <a href={whatsappHref} target="_blank" rel="noreferrer">
                   WhatsApp {siteConfig.whatsappLabel}
-                </a>
-              </li>
-              <li>
-                <a href={siteConfig.mapHref} target="_blank" rel="noreferrer">
-                  {siteConfig.mapLabel}
                 </a>
               </li>
             </ul>

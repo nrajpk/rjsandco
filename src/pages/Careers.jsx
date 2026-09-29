@@ -13,7 +13,7 @@ export default function Careers() {
     <>
       <SEO
         title="Careers and Articleship | RJS & Co."
-        description="Articleship, internship and qualified roles at RJS & Co., Chartered Accountants, Kottayam."
+        description="Articleship, internship and qualified roles at RJS & Co., Chartered Accountants, Kerala."
         path="/careers"
       />
 

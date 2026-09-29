@@ -2,7 +2,7 @@
 //
 // REPLACE BEFORE LAUNCH: every value marked `REPLACE` is a realistic placeholder,
 // not a real credential. Update this file and the whole site follows
-// (hero, signature block, seal, partner list, footer, schema).
+// (hero, signature block, seal, footer, schema). Partner names below are real.
 //
 // When every value below is real, set this to false. Until then every build
 // prints a warning, and `npm run check:facts` fails.
@@ -23,33 +23,14 @@ export const firmFacts = {
   phone: null,
   phoneHref: null,
 
-  // REPLACE: partner names, qualifications, membership numbers and practice areas.
+  // Partners (confirmed). Add qualifications (e.g. 'FCA'), ICAI membership
+  // numbers and practice areas when available; empty fields stay hidden.
   // The first partner signs the report block on the home page.
   partners: [
-    {
-      name: 'Anand Menon',
-      title: 'CA Anand Menon',
-      qualifications: 'FCA, DISA (ICAI)',
-      membershipNo: '214587',
-      role: 'Managing Partner',
-      practice: 'Statutory and tax audit, internal audit, company law'
-    },
-    {
-      name: 'Priya Nair',
-      title: 'CA Priya Nair',
-      qualifications: 'FCA',
-      membershipNo: '228310',
-      role: 'Partner',
-      practice: 'Direct tax, GST, notices and assessments'
-    },
-    {
-      name: 'Thomas Kurian',
-      title: 'CA Thomas Kurian',
-      qualifications: 'ACA, CS',
-      membershipNo: '241906',
-      role: 'Partner',
-      practice: 'NRI taxation, Virtual CFO, business setup'
-    }
+    { name: 'Rijo PT', title: 'CA Rijo PT', qualifications: null, membershipNo: null, role: 'Partner', practice: null },
+    { name: 'Sunil Thomas', title: 'CA Sunil Thomas', qualifications: null, membershipNo: null, role: 'Partner', practice: null },
+    { name: 'Jyothi Thomas', title: 'CA Jyothi Thomas', qualifications: null, membershipNo: null, role: 'Partner', practice: null },
+    { name: 'PA Joseph', title: 'CA PA Joseph', qualifications: null, membershipNo: null, role: 'Partner', practice: null }
   ]
 };
 

@@ -11,6 +11,7 @@ import Contact from './pages/Contact.jsx';
 import PrivacyPolicy from './pages/PrivacyPolicy.jsx';
 import Disclaimer from './pages/Disclaimer.jsx';
 import NotFound from './pages/NotFound.jsx';
+import Letterhead from './pages/Letterhead.jsx';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -27,6 +28,8 @@ export default function App() {
     <>
       <ScrollToTop />
       <Routes>
+        {/* Internal tool, outside the site chrome so only the sheet prints. */}
+        <Route path="rjs/letterhead" element={<Letterhead />} />
         <Route element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />

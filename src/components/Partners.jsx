@@ -6,16 +6,17 @@ export default function Partners({ headingLevel = 3 }) {
   return (
     <ul className="partners">
       {firmFacts.partners.map((partner) => (
-        <li className="partner" key={partner.membershipNo}>
+        <li className="partner" key={partner.name}>
           <Heading className="partner__name">{partner.title}</Heading>
-          <p className="partner__quals">{partner.qualifications}</p>
-          <Fields
-            rows={[
-              { label: 'Role', value: partner.role },
-              { label: 'M. No.', value: partner.membershipNo },
-              { label: 'Leads', value: partner.practice }
-            ]}
-          />
+          <p className="partner__quals">{[partner.qualifications, partner.role].filter(Boolean).join(' · ')}</p>
+          {(partner.membershipNo || partner.practice) && (
+            <Fields
+              rows={[
+                { label: 'M. No.', value: partner.membershipNo },
+                { label: 'Leads', value: partner.practice }
+              ]}
+            />
+          )}
         </li>
       ))}
     </ul>

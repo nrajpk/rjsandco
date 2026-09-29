@@ -37,8 +37,8 @@ export default function About() {
   return (
     <>
       <SEO
-        title="The Firm | RJS & Co., Chartered Accountants, Kottayam"
-        description="RJS & Co. is a partnership of Chartered Accountants in Kottayam, Kerala, registered with the ICAI. Meet the partners and read how the firm works."
+        title="The Firm | RJS & Co., Chartered Accountants, Kerala"
+        description="RJS & Co. is a partnership of Chartered Accountants in Kerala, registered with the ICAI, with offices in Ernakulam, Kottayam and Pathanamthitta. Meet the partners and read how the firm works."
         path="/about"
       />
 
@@ -46,7 +46,7 @@ export default function About() {
         <PageHead
           note="The firm"
           title="A practice of Chartered Accountants, run by its partners."
-          lead={`RJS & Co. has practised in Kottayam since ${firmFacts.established}. We act for companies, firms, trusts, founders and NRI families on audit, tax, company law and advisory work.`}
+          lead={`RJS & Co. has practised since ${firmFacts.established} and works from offices in Ernakulam, Kottayam and Pathanamthitta. We act for companies, firms, trusts, founders and NRI families on audit, tax, company law and advisory work.`}
         />
         <Clause note="Constitution">
           <Fields
@@ -57,7 +57,7 @@ export default function About() {
               { label: 'Established', value: firmFacts.established },
               { label: 'Peer review', value: firmFacts.peerReview },
               { label: 'Team', value: firmFacts.teamSize },
-              { label: 'Office', value: siteConfig.address }
+              { label: 'Offices', value: siteConfig.offices.map((office) => office.city).join(' · ') }
             ]}
           />
         </Clause>

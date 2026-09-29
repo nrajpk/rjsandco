@@ -3,9 +3,9 @@ export const services = [
     slug: 'audit-assurance',
     title: 'Audit & Assurance',
     shortTitle: 'Audit',
-    metaTitle: 'Statutory, Tax and Internal Audit in Kottayam | RJS & Co.',
+    metaTitle: 'Statutory, Tax and Internal Audit in Kerala | RJS & Co.',
     metaDescription:
-      'Statutory audit, tax audit, internal audit and audit readiness for companies, firms, trusts and non-profits. RJS & Co., Chartered Accountants, Kottayam.',
+      'Statutory audit, tax audit, internal audit and audit readiness for companies, firms, trusts and non-profits. RJS & Co., Chartered Accountants, Kerala.',
     excerpt: 'Statutory, tax and internal audit, with the reconciliations and schedules prepared before fieldwork starts.',
     intro:
       'A clean audit gives your bank, your investors and your board a set of numbers they can rely on. We audit companies, firms and trusts, and we help management get the books ready before the auditor arrives.',
@@ -71,7 +71,7 @@ export const services = [
     shortTitle: 'Direct Tax',
     metaTitle: 'Income Tax Filing, Planning and Notices | RJS & Co.',
     metaDescription:
-      'Income tax returns, tax planning, advance tax, TDS, capital gains and notice replies for individuals, professionals, firms and companies. RJS & Co., Kottayam.',
+      'Income tax returns, tax planning, advance tax, TDS, capital gains and notice replies for individuals, professionals, firms and companies. RJS & Co., Kerala.',
     excerpt: 'Returns, advance tax, TDS, capital gains, and replies to income tax notices.',
     intro:
       'Tax planning works before the year closes. We review your position early, file accurately, and prepare replies to notices with the papers to support them.',
@@ -137,7 +137,7 @@ export const services = [
     shortTitle: 'GST',
     metaTitle: 'GST Registration, Returns, ITC and Notices | RJS & Co.',
     metaDescription:
-      'GST registration, GSTR-1 and GSTR-3B filing, input tax credit reconciliation, refunds, annual returns and notice replies. RJS & Co., Kottayam.',
+      'GST registration, GSTR-1 and GSTR-3B filing, input tax credit reconciliation, refunds, annual returns and notice replies. RJS & Co., Kerala.',
     excerpt: 'Monthly returns, input tax credit reconciliation, refunds and notice replies.',
     intro:
       'GST moves your cash. We file on time, claim the credit you are entitled to, reconcile it against what your suppliers filed, and answer department queries from your own records.',
@@ -204,7 +204,7 @@ export const services = [
     shortTitle: 'Accounts',
     metaTitle: 'Accounting, Bookkeeping and MIS | RJS & Co.',
     metaDescription:
-      'Bookkeeping, reconciliations, monthly accounts, MIS and clean-up of prior periods for startups, MSMEs and growing businesses. RJS & Co., Kottayam.',
+      'Bookkeeping, reconciliations, monthly accounts, MIS and clean-up of prior periods for startups, MSMEs and growing businesses. RJS & Co., Kerala.',
     excerpt: 'Monthly books, reconciliations and management accounts you can read.',
     intro:
       'Accurate books let you file on time and make decisions from real numbers. We keep your accounts current, reconcile them every month, and report them in a form you can use.',
@@ -269,7 +269,7 @@ export const services = [
     shortTitle: 'Company Law',
     metaTitle: 'ROC Filings and Company Law Compliance | RJS & Co.',
     metaDescription:
-      'AOC-4 and MGT-7 annual filings, director KYC, board and general meeting records, statutory registers and MCA filings for companies and LLPs. RJS & Co., Kottayam.',
+      'AOC-4 and MGT-7 annual filings, director KYC, board and general meeting records, statutory registers and MCA filings for companies and LLPs. RJS & Co., Kerala.',
     excerpt: 'Annual MCA filings, director KYC, board records and statutory registers.',
     intro:
       'Timely ROC filings and proper minutes protect the company and its directors. We keep your MCA record current and your statutory registers in order.',
@@ -333,7 +333,7 @@ export const services = [
     shortTitle: 'Setup',
     metaTitle: 'Company, LLP and Business Registration | RJS & Co.',
     metaDescription:
-      'Choosing the right structure, then Private Limited, LLP, OPC and firm registration, with PAN, TAN, GST and Udyam. RJS & Co., Kottayam.',
+      'Choosing the right structure, then Private Limited, LLP, OPC and firm registration, with PAN, TAN, GST and Udyam. RJS & Co., Kerala.',
     excerpt: 'Choosing the right structure, then incorporation and every registration that follows.',
     intro:
       'The structure you choose decides your tax, your compliance cost and how you can raise money. We compare the options with you, then complete the registrations so you can open a bank account and start invoicing.',
@@ -399,7 +399,7 @@ export const services = [
     shortTitle: 'Payroll',
     metaTitle: 'Payroll, PF, ESI and Salary TDS | RJS & Co.',
     metaDescription:
-      'Monthly payroll, payslips, salary TDS, PF, ESI and professional tax for Indian employers. RJS & Co., Kottayam.',
+      'Monthly payroll, payslips, salary TDS, PF, ESI and professional tax for Indian employers. RJS & Co., Kerala.',
     excerpt: 'Monthly payroll, payslips, salary TDS, PF, ESI and professional tax.',
     intro:
       'Payroll errors reach your employees before they reach you. We run a monthly payroll that gets deductions right and keeps statutory filings on time.',
@@ -464,7 +464,7 @@ export const services = [
     shortTitle: 'Virtual CFO',
     metaTitle: 'Virtual CFO, MIS and Cash Flow Planning | RJS & Co.',
     metaDescription:
-      'Monthly MIS, cash flow and runway, budgets and forecasts, margin analysis and financial controls for startups and MSMEs. RJS & Co., Kottayam.',
+      'Monthly MIS, cash flow and runway, budgets and forecasts, margin analysis and financial controls for startups and MSMEs. RJS & Co., Kerala.',
     excerpt: 'A monthly finance review with MIS, cash flow, budgets and margins, without a full-time CFO.',
     intro:
       'Revenue can grow while cash runs out. We give founders and management a monthly view of margins, cash and working capital, and sit with you to decide what to do about it.',
@@ -530,7 +530,7 @@ export const services = [
     shortTitle: 'NRI Desk',
     metaTitle: 'NRI Taxation, Property Sale TDS, DTAA and 15CA/15CB | RJS & Co.',
     metaDescription:
-      'Indian tax returns for NRIs, property sale TDS and lower deduction certificates, DTAA relief, capital gains and Form 15CA/15CB for repatriation. RJS & Co., Kottayam.',
+      'Indian tax returns for NRIs, property sale TDS and lower deduction certificates, DTAA relief, capital gains and Form 15CA/15CB for repatriation. RJS & Co., Kerala.',
     excerpt: 'Indian returns, property sales, lower TDS certificates, DTAA relief and repatriation.',
     intro:
       'Selling property in India or moving money abroad should not cost you more tax than the law requires. We work out your Indian tax, the TDS the buyer must deduct, the relief available under the tax treaty, and the paperwork your bank needs to remit the funds.',
@@ -596,7 +596,7 @@ export const services = [
     shortTitle: 'Startups & MSMEs',
     metaTitle: 'Finance and Compliance for Startups and MSMEs | RJS & Co.',
     metaDescription:
-      'Registrations, accounting and GST set-up, compliance calendar, founder tax, payroll, MIS and funding readiness for startups and MSMEs. RJS & Co., Kottayam.',
+      'Registrations, accounting and GST set-up, compliance calendar, founder tax, payroll, MIS and funding readiness for startups and MSMEs. RJS & Co., Kerala.',
     excerpt: 'Set-up, monthly compliance and reporting for founders who want the finance side handled.',
     intro:
       'Founders should spend their time on the business. We set up the accounts, GST, payroll and compliance calendar once, run them each month, and add reporting as you grow.',

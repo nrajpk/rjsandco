@@ -1,0 +1,535 @@
+/* Printable letterhead at /rjs/letterhead. Mirrors the Word letterhead:
+   A4, 20 mm side margins, Georgia, navy + green on white, RJS watermark.
+   The print page box is a named page so no other page of the site is affected. */
+
+.lh-app {
+  --lh-navy: #103a5d;
+  --lh-green: #2d7a36;
+  --lh-ink: #1b2431;
+  --lh-ink2: #4d5766;
+  --lh-ink3: #6d7684;
+  --lh-hair: #c9ced6;
+
+  min-height: 100vh;
+  background: #e6e8ec;
+  color: var(--lh-ink);
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+/* ---------- Toolbar (screen only) ---------- */
+
+.lh-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 24px;
+  padding: 12px clamp(16px, 3vw, 32px);
+  background: #fff;
+  border-bottom: 1px solid var(--lh-hair);
+  font-family: 'Source Sans 3', system-ui, sans-serif;
+  box-shadow: 0 8px 20px -16px rgba(3, 14, 26, 0.5);
+}
+
+.lh-toolbar__title {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.lh-toolbar__title a {
+  font-family: 'Libre Caslon Display', Georgia, serif;
+  font-size: 1.3rem;
+  color: var(--lh-navy);
+  text-decoration: none;
+}
+
+.lh-toolbar__title span {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--lh-green);
+}
+
+.lh-toolbar__hint {
+  margin: 0;
+  flex: 1 1 280px;
+  font-size: 0.88rem;
+  color: var(--lh-ink3);
+}
+
+.lh-toolbar__hint em {
+  font-style: normal;
+  color: var(--lh-green);
+}
+
+.lh-toolbar__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.lh-select {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: var(--lh-ink2);
+}
+
+.lh-select select {
+  min-height: 38px;
+  padding: 6px 30px 6px 10px;
+  border: 1px solid var(--lh-hair);
+  border-radius: 2px;
+  background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23103a5d' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") no-repeat right 10px center;
+  appearance: none;
+  font: inherit;
+  font-size: 0.92rem;
+  color: var(--lh-ink);
+}
+
+.lh-btn {
+  min-height: 38px;
+  padding: 8px 18px;
+  border: 1px solid var(--lh-navy);
+  border-radius: 2px;
+  background: var(--lh-navy);
+  color: #fff;
+  font: inherit;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.lh-btn:hover {
+  background: #0a2a45;
+}
+
+.lh-btn--quiet {
+  background: #fff;
+  color: var(--lh-navy);
+  border-color: var(--lh-hair);
+}
+
+.lh-btn--quiet:hover {
+  background: #fff;
+  border-color: var(--lh-navy);
+}
+
+.lh-app :focus-visible {
+  outline: 2px solid var(--lh-green);
+  outline-offset: 2px;
+}
+
+/* ---------- Desk and A4 sheet (screen) ---------- */
+
+.lh-desk {
+  padding: 28px 16px 48px;
+  overflow-x: auto;
+}
+
+.lh-sheet {
+  position: relative;
+  box-sizing: border-box;
+  width: 210mm;
+  min-height: 297mm;
+  margin: 0 auto;
+  padding: 47mm 20mm 34mm;
+  background-color: #fff;
+  /* Page-break guides on screen, one per A4 page. */
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent calc(297mm - 1px),
+    rgba(16, 58, 93, 0.18) calc(297mm - 1px),
+    rgba(16, 58, 93, 0.18) 297mm
+  );
+  box-shadow: 0 1px 2px rgba(3, 14, 26, 0.2), 0 18px 40px -18px rgba(3, 14, 26, 0.45);
+}
+
+.lh-watermark {
+  position: absolute;
+  left: 50%;
+  top: 148.5mm;
+  width: 115mm;
+  transform: translate(-50%, -50%);
+  opacity: 0.07;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Page 1 header */
+.lh-head {
+  position: absolute;
+  top: 0;
+  left: 20mm;
+  right: 20mm;
+  box-sizing: border-box;
+  padding-top: 11mm;
+}
+
+.lh-head__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 8mm;
+}
+
+.lh-ca {
+  height: 15mm;
+  width: auto;
+}
+
+.lh-lockup {
+  height: 13.5mm;
+  width: auto;
+}
+
+.lh-head__meta {
+  margin-top: 3.5mm;
+  font-size: 8pt;
+  color: var(--lh-ink2);
+}
+
+.lh-head__meta a,
+.lh-head__meta span span {
+  color: var(--lh-navy);
+  text-decoration: none;
+}
+
+.lh-head__meta i {
+  font-style: normal;
+  color: var(--lh-hair);
+  margin: 0 2.2mm;
+}
+
+.lh-head__rule {
+  height: 0.45mm;
+  margin-top: 3.2mm;
+  background: var(--lh-navy);
+}
+
+/* Page 1 footer: offices, then the band */
+.lh-foot {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-sizing: border-box;
+  padding-bottom: 0;
+}
+
+.lh-foot__offices {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4mm;
+  margin: 0 20mm 4mm;
+  padding-top: 2.6mm;
+  border-top: 0.25mm solid var(--lh-hair);
+}
+
+.lh-foot address {
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  font-style: normal;
+  font-size: 7pt;
+  line-height: 1.45;
+  color: var(--lh-ink2);
+}
+
+.lh-foot__city {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.6mm;
+  margin-bottom: 0.8mm;
+  font-size: 8pt;
+  font-weight: 700;
+  font-variant-caps: small-caps;
+  letter-spacing: 0.08em;
+  color: var(--lh-navy);
+}
+
+.lh-pin {
+  width: 3.4mm;
+  height: 3.4mm;
+  color: var(--lh-navy);
+}
+
+/* Thin saffron / navy / green band, flush with the bottom edge. */
+.lh-band {
+  display: block;
+  width: 100%;
+  height: 2.6mm;
+}
+
+/* Pages 2 onward: print only */
+.lh-cont-head,
+.lh-cont-foot,
+.lh-first-space,
+.lh-space-head,
+.lh-space-foot {
+  display: none;
+}
+
+.lh-flow {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.lh-flow td {
+  padding: 0;
+}
+
+.lh-cont-head img {
+  height: 5.6mm;
+  width: auto;
+}
+
+.lh-cont-head__name {
+  margin-left: 2.4mm;
+  font-size: 10pt;
+  color: var(--lh-navy);
+}
+
+.lh-cont-head__role {
+  margin-left: 2.4mm;
+  font-size: 8pt;
+  font-variant-caps: small-caps;
+  letter-spacing: 0.08em;
+  color: var(--lh-green);
+}
+
+.lh-cont-foot p {
+  margin: 0 20mm;
+  font-size: 7.5pt;
+  line-height: 1.6;
+  color: var(--lh-ink3);
+}
+
+.lh-cont-foot p:first-child {
+  padding-top: 2.4mm;
+  border-top: 0.25mm solid var(--lh-hair);
+  color: var(--lh-ink2);
+}
+
+.lh-cont-foot b {
+  margin-right: 3mm;
+  font-weight: 700;
+  font-variant-caps: small-caps;
+  letter-spacing: 0.08em;
+  color: var(--lh-green);
+}
+
+/* ---------- The letter ---------- */
+
+.lh-letter {
+  min-height: 150mm;
+  font-size: 10.5pt;
+  line-height: 1.5;
+  color: var(--lh-ink);
+  caret-color: var(--lh-green);
+  outline: none;
+  border-radius: 1px;
+}
+
+.lh-letter:focus {
+  box-shadow: 0 0 0 1.5mm rgba(45, 122, 54, 0.06);
+}
+
+.lh-letter p {
+  margin: 0 0 3.6mm;
+}
+
+.lh-letter .lh-refline {
+  display: flex;
+  justify-content: space-between;
+  gap: 8mm;
+  margin-bottom: 8mm;
+  font-size: 9.5pt;
+}
+
+.lh-letter .lh-label {
+  color: var(--lh-ink3);
+}
+
+.lh-letter .lh-to {
+  margin-bottom: 6mm;
+  line-height: 1.45;
+}
+
+.lh-letter .lh-subject {
+  margin-bottom: 6mm;
+  font-weight: 700;
+  color: var(--lh-navy);
+}
+
+.lh-letter .lh-signoff {
+  margin-top: 8mm;
+  break-inside: avoid;
+}
+
+.lh-letter .lh-for strong,
+.lh-letter .lh-signer strong {
+  color: var(--lh-navy);
+}
+
+.lh-letter .lh-signspace {
+  height: 16mm;
+  margin: 0;
+}
+
+.lh-letter .lh-muted {
+  color: var(--lh-ink2);
+}
+
+.lh-letter .lh-small {
+  font-size: 9.5pt;
+}
+
+.lh-note {
+  margin: 16px auto 0;
+  max-width: 210mm;
+  text-align: center;
+  font-family: 'Source Sans 3', system-ui, sans-serif;
+  font-size: 0.85rem;
+  color: var(--lh-ink3);
+}
+
+/* ---------- Print ----------
+   Zero page margins (browsers clip anything drawn in a margin). The slim
+   running header and footer are fixed, so they repeat on every page; page 1's
+   full letterhead and office footer sit above them on a white ground, so the
+   slim versions only show from page 2. Spacer rows in <thead>/<tfoot> repeat
+   per page and keep the text clear of both. */
+
+@page letterhead {
+  size: A4;
+  margin: 0;
+}
+
+@media print {
+  html,
+  body {
+    background: #fff !important;
+  }
+
+  .lh-app {
+    min-height: 0;
+    background: none;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .lh-toolbar,
+  .lh-note {
+    display: none !important;
+  }
+
+  .lh-desk {
+    padding: 0;
+    overflow: visible;
+  }
+
+  .lh-sheet {
+    page: letterhead;
+    width: auto;
+    min-height: 0;
+    margin: 0;
+    padding: 0 20mm;
+    background-image: none;
+    box-shadow: none;
+  }
+
+  .lh-space-head {
+    display: block;
+    height: 25mm;
+  }
+
+  .lh-space-foot {
+    display: block;
+    height: 28mm;
+  }
+
+  .lh-first-space {
+    display: block;
+    height: 22mm;
+  }
+
+  .lh-watermark {
+    position: fixed;
+    top: 148.5mm;
+  }
+
+  /* Page 1: full letterhead and office footer. */
+  .lh-head {
+    top: 0;
+    height: 47mm;
+    background: #fff;
+    z-index: 3;
+  }
+
+  .lh-foot {
+    top: calc(297mm - 27mm);
+    bottom: auto;
+    height: 27mm;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background: #fff;
+    z-index: 3;
+  }
+
+  /* Pages 2 onward: slim header and footer. */
+  .lh-cont-head {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 20mm;
+    right: 20mm;
+    height: 19mm;
+    padding-top: 7mm;
+    box-sizing: border-box;
+    border-bottom: 0.25mm solid var(--lh-hair);
+    background: #fff;
+    z-index: 1;
+  }
+
+  .lh-cont-foot {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 20mm;
+    box-sizing: border-box;
+    padding-bottom: 0;
+    background: #fff;
+    z-index: 1;
+  }
+
+  .lh-cont-foot .lh-band {
+    margin-top: 4mm;
+  }
+
+  .lh-letter {
+    min-height: 0;
+  }
+
+  .lh-letter:focus {
+    box-shadow: none;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .lh-toolbar__hint {
+    order: 3;
+    flex-basis: 100%;
+  }
+}

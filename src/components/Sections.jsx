@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { keyMatters } from '../data/keyMatters.js';
 import { serviceCategories, services } from '../data/services.js';
 import { formatReportDate, upcomingDueDates } from '../data/dueDates.js';
-import { siteConfig, whatsappHref } from '../data/siteConfig.js';
+import { officeCities, siteConfig, whatsappHref } from '../data/siteConfig.js';
 import { firmFacts } from '../data/firmFacts.js';
 import PencilTick from './PencilTick.jsx';
 import { ArrowIcon, WhatsAppIcon } from './Report.jsx';
@@ -146,9 +146,8 @@ export function Closing({
         <span>
           <strong>RJS &amp; Co.</strong>, Chartered Accountants
         </span>
-        {siteConfig.addressLines.map((line) => (
-          <span key={line}>{line}</span>
-        ))}
+        <span>Offices in {officeCities.slice(0, -1).join(', ')} and {officeCities[officeCities.length - 1]}</span>
+        <Link to="/contact">Addresses and maps</Link>
         <a href={siteConfig.emailHref}>{siteConfig.email}</a>
         {firmFacts.phone && <a href={firmFacts.phoneHref}>{firmFacts.phone}</a>}
         <a href={whatsappHref} target="_blank" rel="noreferrer">

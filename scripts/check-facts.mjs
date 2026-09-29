@@ -9,7 +9,7 @@ const markers = (source.match(/REPLACE/g) || []).length;
 if (flagged) {
   console.error(
     `\n  ✗ Placeholder credentials are still live (${markers} REPLACE markers in src/data/firmFacts.js).\n` +
-      '    Replace the FRN, partners, membership numbers, year, team size and peer review line,\n' +
+      '    Replace the FRN, year established, team size and peer review line,\n' +
       '    then set FACTS_ARE_PLACEHOLDERS = false.\n'
   );
   process.exit(1);

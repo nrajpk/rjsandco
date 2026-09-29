@@ -30,7 +30,9 @@ A partner-led Chartered Accountancy practice in Kottayam that covers audit, dire
 - Indian regulatory vocabulary is part of the product: ICAI, FRN, statutory audit, tax audit (Sec. 44AB), GSTR-1/3B, ITC, ROC/MCA, DIN/DSC, Form 15CA/15CB, DTAA, TDS, Udyam, DPIIT.
 - Engagements start with a scope review and a document checklist; each service page lists who it's for, scope, process, documents required, and FAQs.
 - The contact form does not post to a server. It validates and then opens the visitor's email client with a pre-filled enquiry to info@rjsllp.com.
-- The office is at KMC XIII/1259 [CSI MSB-IIf-10], 2nd Floor, CSI Multistoried Building, Kottayam, Kerala (confirmed by the user on 2026-09-29). PIN code not yet supplied. The Google Maps link and embed resolve by searching for the building name.
+- Offices (confirmed by the user on 2026-09-29, same order as the letterhead): Ernakulam (2nd Floor, PC Chambers, Ashir Bhavan Lane, Banerji Road, Kacheripady, Ernakulam 682018); Kottayam (2nd Floor, CSI Multistoried Building, Room No. KMC XIII/1259 [CSI MSB-IIf-10], Kottayam); Pathanamthitta (1st Floor, Masjid Complex, Opp. Passport Office, Pathanamthitta 689645). Kottayam is the place of signing. Addresses live in `src/data/siteConfig.js` (`offices`).
+- Partners (confirmed): CA Rijo PT, CA Sunil Thomas, CA Jyothi Thomas, CA PA Joseph. Qualifications and membership numbers not yet supplied; the site hides those fields until added in `src/data/firmFacts.js`.
+- `/rjs/letterhead` is an internal, noindex tool: an editable A4 letterhead that prints with the Word letterhead's header, office footer and watermark on every page. The letterhead contact line uses www.rjsa.com, connect@rjsllp.com and +91 7012312007 (the Word letterhead's details); the public site still uses info@rjsllp.com.
 
 ## Capabilities and Constraints
 
@@ -47,7 +49,7 @@ A partner-led Chartered Accountancy practice in Kottayam that covers audit, dire
 ## Evidence on Hand
 
 - Real: firm name, logo, office address, email, WhatsApp number, map link, full service catalogue with scope, process, documents and FAQs (`src/data/services.js`), client segments (`src/data/industries.js`), general FAQs.
-- Placeholders the user will replace (all kept in `src/data/firmFacts.js`, marked `REPLACE`): partner names and qualifications, ICAI Firm Registration Number, year established, office phone, peer-review status, team size, other office locations.
+- Placeholders the user will replace (all kept in `src/data/firmFacts.js`, marked `REPLACE`): ICAI Firm Registration Number, year established, office phone, peer-review status, team size, partner qualifications and membership numbers.
 - Absent and not to be invented: client names or logos, testimonials, case studies, numeric outcomes (refunds recovered, audits completed), awards, press.
 
 ## Product Principles

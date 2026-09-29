@@ -10,7 +10,7 @@ export const generalFaqs = [
       'If you want fewer surprises, yes. Books kept properly from the start make GST, income tax, a bank loan and an eventual audit far easier.'
   },
   {
-    question: 'Can you work with us if we are not in Kottayam?',
+    question: 'Can you work with us if you are not near one of our offices?',
     answer:
       'Yes. We handle most engagements over email, phone and video, and collect documents through a channel we agree with you.'
   },

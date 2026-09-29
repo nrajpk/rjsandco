@@ -23,7 +23,7 @@ export default function Signatory({ partner = signingPartner }) {
         <span>Chartered Accountants</span>
       </p>
       <div className="signatory__mark">
-        <svg className="signature" viewBox="0 0 270 96" role="img" aria-label={`Signature of ${partner.title}`}>
+        <svg className="signature" viewBox="0 0 270 96" aria-hidden="true">
           {SIGNATURE_STROKES.map((d, index) => (
             <path key={d} className={`signature__stroke signature__stroke--${index}`} pathLength="1" d={d} />
           ))}
@@ -33,9 +33,11 @@ export default function Signatory({ partner = signingPartner }) {
       </div>
       <p className="signatory__name">
         <strong>{partner.title}</strong>, {partner.role}
-        <span>
-          {partner.qualifications} · M. No. {partner.membershipNo}
-        </span>
+        {(partner.qualifications || partner.membershipNo) && (
+          <span>
+            {[partner.qualifications, partner.membershipNo && `M. No. ${partner.membershipNo}`].filter(Boolean).join(' · ')}
+          </span>
+        )}
       </p>
     </div>
   );

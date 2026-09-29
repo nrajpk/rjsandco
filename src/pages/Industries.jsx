@@ -8,7 +8,7 @@ export default function Industries() {
     <>
       <SEO
         title="Who We Act For | RJS & Co., Chartered Accountants"
-        description="Companies, startups, MSMEs, firms and LLPs, professionals, NRIs, trading and service businesses, trusts and non-profits. RJS & Co., Kottayam."
+        description="Companies, startups, MSMEs, firms and LLPs, professionals, NRIs, trading and service businesses, trusts and non-profits. RJS & Co., Kerala."
         path="/industries"
       />
 

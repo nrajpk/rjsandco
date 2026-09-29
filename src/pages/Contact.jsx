@@ -1,15 +1,19 @@
+import { useState } from 'react';
 import ContactForm from '../components/ContactForm.jsx';
 import SEO from '../components/SEO.jsx';
 import { Clause, Fields, PageHead, Sheet, WhatsAppIcon } from '../components/Report.jsx';
-import { siteConfig, whatsappHref } from '../data/siteConfig.js';
+import { officeMapEmbed, officeMapHref, siteConfig, whatsappHref } from '../data/siteConfig.js';
 import { firmFacts } from '../data/firmFacts.js';
 
 export default function Contact() {
+  const [mapCity, setMapCity] = useState('Kottayam');
+  const mapOffice = siteConfig.offices.find((office) => office.city === mapCity) || siteConfig.offices[0];
+
   return (
     <>
       <SEO
-        title="Contact RJS & Co. | Book a Consultation, Kottayam"
-        description="Book a consultation with RJS & Co., Chartered Accountants, Kottayam, for audit, tax, GST, company law, payroll, Virtual CFO or NRI taxation."
+        title="Contact RJS & Co. | Book a Consultation, Kerala"
+        description="Book a consultation with RJS & Co., Chartered Accountants, with offices in Ernakulam, Kottayam and Pathanamthitta, for audit, tax, GST, company law, payroll, Virtual CFO or NRI taxation."
         path="/contact"
       />
 
@@ -27,7 +31,6 @@ export default function Contact() {
             <aside className="office" aria-label="Office details">
               <Fields
                 rows={[
-                  { label: 'Office', value: siteConfig.address },
                   { label: 'Email', value: <a className="inline-link" href={siteConfig.emailHref}>{siteConfig.email}</a> },
                   firmFacts.phone && { label: 'Phone', value: <a className="inline-link" href={firmFacts.phoneHref}>{firmFacts.phone}</a> },
                   {
@@ -46,18 +49,45 @@ export default function Contact() {
                 </span>
                 Message on WhatsApp
               </a>
+
+              <div className="offices">
+                <h2 className="offices__title">Offices</h2>
+                {siteConfig.offices.map((office) => (
+                  <address className="office-card" key={office.city}>
+                    <span className="office-card__city">{office.city}</span>
+                    {office.lines.map((line) => (
+                      <span key={line}>{line}</span>
+                    ))}
+                    <a className="inline-link" href={officeMapHref(office)} target="_blank" rel="noreferrer">
+                      Open in Google Maps
+                    </a>
+                  </address>
+                ))}
+              </div>
+
               <div className="map-frame">
+                <div className="map-tabs" role="group" aria-label="Show office on the map">
+                  {siteConfig.offices.map((office) => (
+                    <button
+                      key={office.city}
+                      type="button"
+                      className="map-tab"
+                      aria-pressed={office.city === mapOffice.city}
+                      onClick={() => setMapCity(office.city)}
+                    >
+                      {office.city}
+                    </button>
+                  ))}
+                </div>
                 <iframe
-                  title="RJS & Co. office on Google Maps"
-                  src={siteConfig.mapEmbedHref}
+                  key={mapOffice.city}
+                  title={`RJS & Co. ${mapOffice.city} office on Google Maps`}
+                  src={officeMapEmbed(mapOffice)}
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                   allowFullScreen
                 />
               </div>
-              <a className="text-link" href={siteConfig.mapHref} target="_blank" rel="noreferrer">
-                {siteConfig.mapLabel}
-              </a>
             </aside>
           </div>
         </Clause>

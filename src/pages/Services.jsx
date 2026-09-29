@@ -7,7 +7,7 @@ export default function Services() {
     <>
       <SEO
         title="The Practice | Audit, Tax, GST, Company Law and NRI Desk | RJS & Co."
-        description="Audit and assurance, income tax, GST, company law, business setup, accounting, payroll, Virtual CFO, startup support and an NRI desk. RJS & Co., Kottayam."
+        description="Audit and assurance, income tax, GST, company law, business setup, accounting, payroll, Virtual CFO, startup support and an NRI desk. RJS & Co., Kerala."
         path="/services"
       />
 

@@ -4,9 +4,7 @@ export const siteConfig = {
   domain: 'https://rjsandco.in',
   tagline: 'Chartered Accountants',
   description:
-    'RJS & Co. is a firm of Chartered Accountants in Kottayam, Kerala. Statutory and tax audit, income tax, GST, company law, accounting, payroll, Virtual CFO and NRI taxation.',
-  address: 'KMC XIII/1259 [CSI MSB-IIf-10], 2nd Floor, CSI Multistoried Building, Kottayam, Kerala, India',
-  addressLines: ['KMC XIII/1259 [CSI MSB-IIf-10]', '2nd Floor, CSI Multistoried Building', 'Kottayam, Kerala, India'],
+    'RJS & Co. is a firm of Chartered Accountants in Kerala, with offices in Ernakulam, Kottayam and Pathanamthitta. Statutory and tax audit, income tax, GST, company law, accounting, payroll, Virtual CFO and NRI taxation.',
   city: 'Kottayam',
   state: 'Kerala',
   postalCode: '',
@@ -15,10 +13,32 @@ export const siteConfig = {
   emailHref: 'mailto:info@rjsllp.com',
   whatsappNumber: '971551070078',
   whatsappLabel: '+971 55 107 0078',
-  mapLabel: 'Open in Google Maps',
-  mapHref: 'https://www.google.com/maps/search/?api=1&query=CSI%20Multistoried%20Building%2C%20Kottayam%2C%20Kerala',
-  mapEmbedHref:
-    'https://www.google.com/maps?q=CSI%20Multistoried%20Building%2C%20Kottayam%2C%20Kerala&output=embed',
+  // Offices, in the order the letterhead lists them. Kottayam is the place of signing.
+  offices: [
+    {
+      city: 'Ernakulam',
+      lines: ['2nd Floor, PC Chambers, Ashir Bhavan Lane', 'Banerji Road, Kacheripady', 'Ernakulam 682018'],
+      mapHref: 'https://maps.app.goo.gl/Dwv51ejpE7YBj5q37',
+      mapQuery: 'PC Chambers, Ashir Bhavan Lane, Banerji Road, Kacheripady, Ernakulam 682018'
+    },
+    {
+      city: 'Kottayam',
+      lines: ['2nd Floor, CSI Multistoried Building', 'Room No. KMC XIII/1259 [CSI MSB-IIf-10]', 'Kottayam'],
+      mapQuery: 'CSI Multistoried Building, Kottayam, Kerala'
+    },
+    {
+      city: 'Pathanamthitta',
+      lines: ['1st Floor, Masjid Complex', 'Opp. Passport Office', 'Pathanamthitta 689645'],
+      mapQuery: 'Masjid Complex, Opposite Passport Office, Pathanamthitta 689645'
+    }
+  ],
+  // Contact line printed on the letterhead (matches the Word letterhead).
+  letterhead: {
+    website: 'www.rjsa.com',
+    websiteHref: 'http://www.rjsa.com',
+    email: 'connect@rjsllp.com',
+    phone: '+91 7012312007'
+  },
   consultationPath: '/contact',
   copyrightStartYear: '2026',
   externalLinks: [
@@ -39,3 +59,13 @@ export const navLinks = [
   { label: 'Insights', path: '/resources' },
   { label: 'Contact', path: '/contact' }
 ];
+
+export const officeCities = siteConfig.offices.map((office) => office.city);
+
+export function officeMapHref(office) {
+  return office.mapHref || `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(office.mapQuery)}`;
+}
+
+export function officeMapEmbed(office) {
+  return `https://www.google.com/maps?q=${encodeURIComponent(office.mapQuery)}&output=embed`;
+}

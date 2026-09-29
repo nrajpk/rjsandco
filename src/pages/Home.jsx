@@ -47,14 +47,14 @@ export default function Home() {
     email: siteConfig.email,
     ...(firmFacts.phone ? { telephone: firmFacts.phone } : {}),
     foundingDate: firmFacts.established,
-    address: {
+    address: siteConfig.offices.map((office) => ({
       '@type': 'PostalAddress',
-      streetAddress: siteConfig.address,
-      addressLocality: siteConfig.city,
+      streetAddress: office.lines.slice(0, -1).join(', '),
+      addressLocality: office.city,
       addressRegion: siteConfig.state,
-      ...(siteConfig.postalCode ? { postalCode: siteConfig.postalCode } : {}),
       addressCountry: 'IN'
-    },
+    })),
+    employee: firmFacts.partners.map((partner) => ({ '@type': 'Person', name: partner.title, jobTitle: partner.role })),
     areaServed: 'India',
     serviceType: services.map((service) => service.title)
   };
@@ -62,8 +62,8 @@ export default function Home() {
   return (
     <>
       <SEO
-        title="RJS & Co. | Chartered Accountants, Kottayam"
-        description="Audit, income tax, GST, company law and NRI taxation, reviewed and signed by a partner. RJS & Co., Chartered Accountants, Kottayam, Kerala."
+        title="RJS & Co. | Chartered Accountants, Kerala"
+        description="Audit, income tax, GST, company law and NRI taxation, reviewed and signed by a partner. RJS & Co., Chartered Accountants, with offices in Ernakulam, Kottayam and Pathanamthitta."
         path="/"
         schema={schema}
       />
@@ -81,11 +81,11 @@ export default function Home() {
             </p>
             <p className="opinion__glance">
               ICAI FRN <strong>{firmFacts.frn}</strong> · Est. {firmFacts.established} · {firmFacts.partners.length} partners ·{' '}
-              {siteConfig.city}
+              {siteConfig.offices.length} offices in Kerala
             </p>
             <h1>Audit, tax and company law, reviewed and signed by a partner.</h1>
             <p className="opinion__lead">
-              RJS &amp; Co. is a firm of Chartered Accountants in Kottayam. We audit companies, trusts and firms,
+              RJS &amp; Co. is a firm of Chartered Accountants with offices in Ernakulam, Kottayam and Pathanamthitta. We audit companies, trusts and firms,
               handle their income tax and GST, keep their MCA filings current, and advise NRIs on property sales and
               repatriation.
             </p>
