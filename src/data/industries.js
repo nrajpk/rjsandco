@@ -1,48 +1,38 @@
 export const industries = [
   {
+    title: 'Private limited companies',
+    description: 'Statutory audit, ROC filings, board records, registers and director compliance.'
+  },
+  {
     title: 'Startups',
-    description:
-      'Incorporation, founder-friendly compliance, DPIIT support, accounting setup, funding readiness, and investor reporting discipline.'
+    description: 'Incorporation, DPIIT recognition, accounting set-up, funding readiness and investor reporting.'
   },
   {
     title: 'MSMEs',
-    description:
-      'GST, bookkeeping, payroll, tax planning, Udyam registration, working capital visibility, and practical compliance systems.'
+    description: 'GST, bookkeeping, payroll, Udyam registration, tax planning and working capital.'
   },
   {
-    title: 'Private Limited Companies',
-    description:
-      'ROC filings, board documentation, statutory registers, audit coordination, accounting review, and director compliance support.'
+    title: 'Partnership firms and LLPs',
+    description: 'Tax audit, returns, registrations, partner accounts and profit allocation.'
   },
   {
-    title: 'Partnership Firms',
-    description:
-      'Tax filings, firm registrations, accounting controls, profit allocation support, and compliance planning for growing firms.'
+    title: 'Professionals and consultants',
+    description: 'Income tax planning, GST on professional fees, invoicing and annual filings.'
   },
   {
-    title: 'Professionals and Consultants',
-    description:
-      'Income tax planning, GST applicability checks, invoicing practices, expense structuring, and annual filing support.'
+    title: 'NRIs and their families',
+    description: 'Indian returns, property sales, lower TDS certificates, DTAA relief and repatriation under FEMA.'
   },
   {
-    title: 'NRIs',
-    description:
-      'Indian tax filing, property transaction support, TDS advisory, DTAA review, repatriation documentation, and FEMA-aligned guidance.'
+    title: 'Trading businesses',
+    description: 'GST returns, ITC reconciliation, inventory accounting, vendor records and margins.'
   },
   {
-    title: 'Trading Businesses',
-    description:
-      'GST return discipline, ITC reconciliation, inventory-aware accounting, vendor documentation, and margin reporting.'
+    title: 'Service businesses',
+    description: 'GST classification, recurring invoicing, payroll, cash flow and management reports.'
   },
   {
-    title: 'Service Businesses',
-    description:
-      'GST classification, recurring invoicing, payroll support, cash flow tracking, and management reporting.'
-  },
-  {
-    title: 'Non-profits and Trusts',
-    description:
-      'Accounting, audit coordination, registration support, donation record discipline, and compliance documentation.'
+    title: 'Trusts and non-profits',
+    description: 'Audit, 12A and 80G registration support, donation records and annual compliance.'
   }
 ];
-

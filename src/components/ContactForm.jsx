@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { siteConfig } from '../data/siteConfig.js';
 import { services } from '../data/services.js';
+import { ArrowIcon } from './Report.jsx';
 
 const initialForm = {
   name: '',
@@ -13,22 +14,38 @@ const initialForm = {
 function validate(form) {
   const errors = {};
 
-  if (!form.name.trim()) errors.name = 'Please enter your name.';
-  if (!form.phone.trim()) errors.phone = 'Please enter your phone number.';
-  if (form.phone && !/^[0-9+\-\s()]{7,20}$/.test(form.phone)) errors.phone = 'Please enter a valid phone number.';
-  if (!form.email.trim()) errors.email = 'Please enter your email address.';
-  if (form.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) errors.email = 'Please enter a valid email address.';
-  if (!form.service) errors.service = 'Please select a service.';
-  if (!form.message.trim()) errors.message = 'Please share a short message.';
+  if (!form.name.trim()) errors.name = 'Enter your name.';
+  if (!form.phone.trim()) errors.phone = 'Enter a phone number, with country code if you are outside India.';
+  else if (!/^[0-9+\-\s()]{7,20}$/.test(form.phone)) errors.phone = 'Use digits, spaces and + only, for example +91 98470 12345.';
+  if (!form.email.trim()) errors.email = 'Enter your email address.';
+  else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) errors.email = 'Check the email address, for example name@company.com.';
+  if (!form.service) errors.service = 'Choose the desk closest to your matter, or "Not sure yet".';
+  if (!form.message.trim()) errors.message = 'Describe the matter in a sentence or two.';
 
   return errors;
+}
+
+function Field({ label, hint, error, name, children }) {
+  return (
+    <div className={`field ${error ? 'has-error' : ''}`}>
+      <label className="field__label" htmlFor={`enquiry-${name}`}>
+        {label}
+        {hint && <em>{hint}</em>}
+      </label>
+      {children}
+      {error && (
+        <span className="field__error" id={`enquiry-${name}-error`}>
+          {error}
+        </span>
+      )}
+    </div>
+  );
 }
 
 export default function ContactForm() {
   const [form, setForm] = useState(initialForm);
   const [errors, setErrors] = useState({});
   const [submitted, setSubmitted] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
 
   function handleChange(event) {
     const { name, value } = event.target;
@@ -37,89 +54,90 @@ export default function ContactForm() {
     setSubmitted(false);
   }
 
+  function inputProps(name) {
+    return {
+      id: `enquiry-${name}`,
+      name,
+      value: form[name],
+      onChange: handleChange,
+      'aria-invalid': errors[name] ? true : undefined,
+      'aria-describedby': errors[name] ? `enquiry-${name}-error` : undefined
+    };
+  }
+
   function handleSubmit(event) {
     event.preventDefault();
     const nextErrors = validate(form);
     setErrors(nextErrors);
 
-    if (Object.keys(nextErrors).length === 0) {
-      setIsSubmitting(true);
-
-      const subject = `Website enquiry: ${form.service}`;
-      const body = [
-        `Name: ${form.name}`,
-        `Phone: ${form.phone}`,
-        `Email: ${form.email}`,
-        `Service required: ${form.service}`,
-        '',
-        'Message:',
-        form.message
-      ].join('\n');
-
-      window.location.href = `${siteConfig.emailHref}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-      setSubmitted(true);
-      setForm(initialForm);
-      setIsSubmitting(false);
+    const firstError = Object.keys(nextErrors)[0];
+    if (firstError) {
+      document.getElementById(`enquiry-${firstError}`)?.focus();
+      return;
     }
+
+    const subject = `Enquiry: ${form.service}`;
+    const body = [
+      `Name: ${form.name}`,
+      `Phone: ${form.phone}`,
+      `Email: ${form.email}`,
+      `Desk: ${form.service}`,
+      '',
+      form.message
+    ].join('\n');
+
+    window.location.href = `${siteConfig.emailHref}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    setSubmitted(true);
+    setForm(initialForm);
   }
 
   return (
-    <form className="contact-form" onSubmit={handleSubmit} noValidate>
-      <div className="form-grid">
-        <label>
-          <span>Name</span>
-          <input type="text" name="name" value={form.name} onChange={handleChange} autoComplete="name" />
-          {errors.name && <small>{errors.name}</small>}
-        </label>
-
-        <label>
-          <span>Phone</span>
-          <input type="tel" name="phone" value={form.phone} onChange={handleChange} autoComplete="tel" />
-          {errors.phone && <small>{errors.phone}</small>}
-        </label>
+    <form className="enquiry" onSubmit={handleSubmit} noValidate>
+      <div className="enquiry__row">
+        <Field label="Name" name="name" error={errors.name}>
+          <input type="text" autoComplete="name" {...inputProps('name')} />
+        </Field>
+        <Field label="Phone" hint="with country code" name="phone" error={errors.phone}>
+          <input type="tel" autoComplete="tel" {...inputProps('phone')} />
+        </Field>
       </div>
 
-      <div className="form-grid">
-        <label>
-          <span>Email</span>
-          <input type="email" name="email" value={form.email} onChange={handleChange} autoComplete="email" />
-          {errors.email && <small>{errors.email}</small>}
-        </label>
-
-        <label>
-          <span>Service required</span>
-          <select name="service" value={form.service} onChange={handleChange}>
-            <option value="">Select a service</option>
+      <div className="enquiry__row">
+        <Field label="Email" name="email" error={errors.email}>
+          <input type="email" autoComplete="email" {...inputProps('email')} />
+        </Field>
+        <Field label="Desk" name="service" error={errors.service}>
+          <select {...inputProps('service')}>
+            <option value="">Choose a desk</option>
             {services.map((service) => (
               <option key={service.slug} value={service.title}>
                 {service.title}
               </option>
             ))}
-            <option value="Not sure">Not sure yet</option>
+            <option value="Not sure yet">Not sure yet</option>
           </select>
-          {errors.service && <small>{errors.service}</small>}
-        </label>
+        </Field>
       </div>
 
-      <label>
-        <span>Message</span>
+      <Field label="The matter" hint="no documents yet, please" name="message" error={errors.message}>
         <textarea
-          name="message"
           rows="5"
-          value={form.message}
-          onChange={handleChange}
-          placeholder="Briefly explain what you need help with."
+          placeholder="For example: we received a GST notice under Section 73 dated 12 September and the reply is due in 30 days."
+          {...inputProps('message')}
         />
-        {errors.message && <small>{errors.message}</small>}
-      </label>
+      </Field>
 
-      <button className="btn btn-primary" type="submit" disabled={isSubmitting}>
-        {isSubmitting ? 'Checking details...' : 'Submit Enquiry'}
-      </button>
+      <div className="enquiry__foot">
+        <button className="btn btn-primary" type="submit">
+          Send enquiry
+          <ArrowIcon />
+        </button>
+        <p className="enquiry__hint">Sending opens your email app with this enquiry filled in, addressed to {siteConfig.email}.</p>
+      </div>
 
       {submitted && (
-        <p className="form-success" role="status">
-          Your email app should open with the enquiry details filled in. Please send the email to complete your enquiry.
+        <p className="form-status" role="status">
+          Your email app should now be open with the enquiry ready. Press send there to reach us.
         </p>
       )}
     </form>

@@ -1,31 +1,59 @@
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO.jsx';
-import Hero from '../components/Hero.jsx';
-import SectionHeading from '../components/SectionHeading.jsx';
-import ServiceCard from '../components/ServiceCard.jsx';
 import FAQAccordion from '../components/FAQAccordion.jsx';
-import CTASection from '../components/CTASection.jsx';
+import Signatory from '../components/Signatory.jsx';
+import Partners from '../components/Partners.jsx';
+import { ArrowIcon, Clause, Fields, Sheet, WhatsAppIcon } from '../components/Report.jsx';
+import { Closing, DueDates, KeyMatters, ServiceSchedule } from '../components/Sections.jsx';
 import { generalFaqs } from '../data/faqs.js';
 import { industries } from '../data/industries.js';
-import { serviceCategories, services } from '../data/services.js';
-import { siteConfig } from '../data/siteConfig.js';
+import { services } from '../data/services.js';
+import { siteConfig, whatsappHref } from '../data/siteConfig.js';
+import { firmFacts } from '../data/firmFacts.js';
+import { formatReportDate } from '../data/dueDates.js';
+
+const TOTAL = 7;
+
+const basis = [
+  {
+    ref: '2.1',
+    title: 'Scope before fees.',
+    text: 'Before work starts, we set out in writing what the engagement covers, the documents we need, the timetable and the fee. We quote routine work as a fixed fee.'
+  },
+  {
+    ref: '2.2',
+    title: 'A partner on the matter.',
+    text: 'A partner signs every audit report and reviews notices and complex matters. You can speak to that partner directly.'
+  },
+  {
+    ref: '2.3',
+    title: 'Records kept in confidence.',
+    text: 'We ask for documents against a written checklist, through a channel we agree with you, and limit access to the people on your engagement.'
+  },
+  {
+    ref: '2.4',
+    title: 'Dates tracked for you.',
+    text: 'We keep your statutory calendar, remind you before each filing, and tell you early when a document is still missing.'
+  }
+];
 
 export default function Home() {
   const schema = {
     '@context': 'https://schema.org',
-    '@type': 'ProfessionalService',
+    '@type': 'AccountingService',
     name: siteConfig.legalName,
     url: siteConfig.domain,
     description: siteConfig.description,
-    telephone: siteConfig.phone,
     email: siteConfig.email,
+    ...(firmFacts.phone ? { telephone: firmFacts.phone } : {}),
+    foundingDate: firmFacts.established,
     address: {
       '@type': 'PostalAddress',
       streetAddress: siteConfig.address,
       addressLocality: siteConfig.city,
       addressRegion: siteConfig.state,
-      postalCode: siteConfig.postalCode,
-      addressCountry: siteConfig.country
+      ...(siteConfig.postalCode ? { postalCode: siteConfig.postalCode } : {}),
+      addressCountry: 'IN'
     },
     areaServed: 'India',
     serviceType: services.map((service) => service.title)
@@ -34,151 +62,125 @@ export default function Home() {
   return (
     <>
       <SEO
-        title="RJS & Co. | Chartered Accountants, Tax Consultants and Business Advisors"
-        description="RJS & Co. provides audit, tax, GST, accounting, ROC compliance, business setup, payroll, Virtual CFO, NRI taxation, and startup advisory services in India."
+        title="RJS & Co. | Chartered Accountants, Kottayam"
+        description="Audit, income tax, GST, company law and NRI taxation, reviewed and signed by a partner. RJS & Co., Chartered Accountants, Kottayam, Kerala."
         path="/"
         schema={schema}
       />
 
-      <Hero
-        eyebrow="Chartered Accountants and Business Advisors"
-        title="Do not let compliance slow your growth."
-        description="Expert CA, tax, audit, GST, accounting, ROC, payroll, Virtual CFO, and NRI taxation support for Indian startups, growing MSMEs, professionals, companies, and NRIs."
-        primaryLabel="Book a Consultation"
-        primaryPath="/contact"
-        secondaryLabel="View Services"
-        secondaryPath="/services"
-        sideEyebrow="What we cover"
-        sideNote="Need help with tax, GST, audit, or ROC? Share your requirement and get a clear next step."
-        sideItems={serviceCategories}
-      />
-
-      <section className="section intro-strip section-rule">
-        <div className="container split-grid">
-          <div>
-            <p className="eyebrow">About the firm</p>
-            <h2>Practical compliance and advisory support without the confusion.</h2>
-          </div>
-          <p>
-            RJS & Co. is built for clients who want clarity, responsiveness, and reliable execution. The firm supports routine compliance as well as business decisions that need accounting, tax, and financial judgement.
+      <Sheet page={1} total={TOTAL} label="Opinion">
+        <div className="opinion">
+          <p className="clause__note" aria-hidden="true">
+            Opinion
           </p>
-        </div>
-      </section>
+          <div>
+            <p className="opinion__addressee">
+              To the <strong>directors, partners and founders</strong> of Indian businesses, and to{' '}
+              <strong>NRIs</strong> with affairs in India
+            </p>
+            <p className="opinion__glance">
+              ICAI FRN <strong>{firmFacts.frn}</strong> · Est. {firmFacts.established} · {firmFacts.partners.length} partners ·{' '}
+              {siteConfig.city}
+            </p>
+            <h1>Audit, tax and company law, reviewed and signed by a partner.</h1>
+            <p className="opinion__lead">
+              RJS &amp; Co. is a firm of Chartered Accountants in Kottayam. We audit companies, trusts and firms,
+              handle their income tax and GST, keep their MCA filings current, and advise NRIs on property sales and
+              repatriation.
+            </p>
+            <div className="actions">
+              <Link to={siteConfig.consultationPath} className="btn btn-primary">
+                Book a consultation
+                <ArrowIcon />
+              </Link>
+              <a className="text-link" href={whatsappHref} target="_blank" rel="noreferrer">
+                <WhatsAppIcon />
+                Message the Support Desk
+              </a>
+            </div>
+          </div>
 
-      <section className="section soft-section">
-        <div className="container">
-          <SectionHeading
-            eyebrow="Services"
-            title="Core professional services"
-            description="A practical service menu focused on the outcomes clients actually care about: fewer penalties, cleaner books, stronger reporting, and better decisions."
-            align="center"
-          />
-          <div className="card-grid service-grid">
-            {services.slice(0, 6).map((service) => (
-              <ServiceCard key={service.slug} service={service} />
+          <div className="opinion__attest">
+            <Fields
+              rows={[
+                { label: 'ICAI FRN', value: firmFacts.frn },
+                { label: 'Established', value: firmFacts.established },
+                { label: 'Partners', value: String(firmFacts.partners.length) },
+                { label: 'Place', value: 'Kottayam, Kerala' },
+                { label: 'Date', value: formatReportDate() }
+              ]}
+            />
+            <Signatory />
+          </div>
+        </div>
+      </Sheet>
+
+      <Sheet page={2} total={TOTAL} label="Basis for our opinion">
+        <Clause note="Basis for our opinion" quietOnMobile>
+          <p className="statement">How we work, and what you can hold us to.</p>
+          <ol className="paras" style={{ marginTop: 36 }}>
+            {basis.map((item) => (
+              <li key={item.ref} data-ref={item.ref}>
+                <div>
+                  <h3>{item.title}</h3> <p>{item.text}</p>
+                </div>
+              </li>
             ))}
-          </div>
-          <div className="center-action">
-            <Link to="/services" className="btn btn-secondary">Explore all services</Link>
-          </div>
-        </div>
-      </section>
+          </ol>
+        </Clause>
+      </Sheet>
 
-      <section className="section">
-        <div className="container">
-          <SectionHeading
-            eyebrow="Why choose RJS & Co."
-            title="Trust-focused delivery for serious financial matters"
-            description="The site avoids vague promises. The working model is simple: understand the requirement, define the scope, collect the right documents, execute carefully, and keep the client informed."
-          />
-          <div className="feature-grid">
-            <article className="feature-card">
-              <span>01</span>
-              <h3>Partner-led thinking</h3>
-              <p>You need access to qualified judgement, not only form filling. Complex issues are reviewed with professional care.</p>
-            </article>
-            <article className="feature-card">
-              <span>02</span>
-              <h3>Zero-surprise scope</h3>
-              <p>Routine work can be scoped clearly so clients understand deliverables, documents, timelines, and expected fees.</p>
-            </article>
-            <article className="feature-card">
-              <span>03</span>
-              <h3>Secure document handling</h3>
-              <p>Financial records are treated with confidentiality, disciplined access, and professional responsibility.</p>
-            </article>
-          </div>
-        </div>
-      </section>
+      <Sheet page={3} total={TOTAL} label="Key matters">
+        <Clause num="3" title="Key matters" sub="What brings clients to us">
+          <p className="prose muted" style={{ marginBottom: 28 }}>
+            Most enquiries start with one of these. Find yours to see how we handle it and which desk takes it on.
+          </p>
+          <KeyMatters />
+        </Clause>
+      </Sheet>
 
-      <section className="section soft-section">
-        <div className="container">
-          <SectionHeading
-            eyebrow="Who we serve"
-            title="Support for businesses, professionals, and NRIs"
-            description="RJS & Co. works with clients who need dependable compliance, clear reporting, and practical advisory support."
-            align="center"
-          />
-          <div className="mini-grid">
-            {industries.slice(0, 6).map((industry) => (
-              <article className="mini-card" key={industry.title}>
+      <Sheet page={4} total={TOTAL} label="Schedule of services">
+        <Clause num="4" title="Schedule of services" sub="Five desks, one engagement">
+          <ServiceSchedule />
+          <p style={{ marginTop: 32 }}>
+            <Link className="text-link" to="/services">
+              The practice in full
+              <ArrowIcon className="" />
+            </Link>
+          </p>
+        </Clause>
+      </Sheet>
+
+      <Sheet page={5} total={TOTAL} label="Dates to watch">
+        <Clause num="5" title="Dates to watch" sub="Updated each day">
+          <DueDates />
+        </Clause>
+      </Sheet>
+
+      <Sheet page={6} total={TOTAL} label="Who we act for and the partners">
+        <Clause num="6" title="Who we act for">
+          <ul className="ledger-list">
+            {industries.map((industry) => (
+              <li key={industry.title}>
                 <h3>{industry.title}</h3>
                 <p>{industry.description}</p>
-              </article>
+              </li>
             ))}
-          </div>
-        </div>
-      </section>
+          </ul>
+        </Clause>
+        <Clause num="7" title="The partners">
+          <Partners />
+        </Clause>
+      </Sheet>
 
-      <section className="section">
-        <div className="container split-grid compliance-panel">
-          <div>
-            <p className="eyebrow">Compliance and advisory</p>
-            <h2>Keep filings, notices, books, and decisions moving in one rhythm.</h2>
-            <p>
-              The real value of a CA firm is not only filing returns. It is helping you avoid preventable problems, see what the numbers mean, and prepare before deadlines become emergencies.
-            </p>
-          </div>
-          <div className="check-list">
-            <span>GST filing and ITC reconciliation</span>
-            <span>Income tax planning and return filing</span>
-            <span>ROC annual and event-based compliance</span>
-            <span>Accounting cleanup and monthly reporting</span>
-            <span>Payroll, TDS, audit readiness, and advisory</span>
-          </div>
-        </div>
-      </section>
-
-      <section className="section soft-section">
-        <div className="container">
-          <SectionHeading
-            eyebrow="Process"
-            title="A simple way to start"
-            description="No confusing handover. No blind document dump. The engagement begins with clarity."
-            align="center"
-          />
-          <div className="process-grid">
-            <article><span>1</span><h3>Share requirement</h3><p>Explain the issue, deadline, entity type, and current compliance status.</p></article>
-            <article><span>2</span><h3>Scope review</h3><p>RJS & Co. identifies the service scope, documents needed, and practical next step.</p></article>
-            <article><span>3</span><h3>Document collection</h3><p>Required records are collected through a structured checklist, not scattered messages.</p></article>
-            <article><span>4</span><h3>Execution and closure</h3><p>The matter is completed with confirmation, records, and future reminders where useful.</p></article>
-          </div>
-        </div>
-      </section>
-
-      <section className="section">
-        <div className="container faq-preview">
-          <SectionHeading
-            eyebrow="FAQs"
-            title="Common questions before engaging a CA firm"
-            description="Clear answers before the first call saves time for both sides."
-          />
-          <FAQAccordion items={generalFaqs.slice(0, 4)} />
-        </div>
-      </section>
-
-      <CTASection />
+      <Sheet page={7} total={TOTAL} label="Questions and contact">
+        <Clause num="8" title="Questions">
+          <FAQAccordion items={generalFaqs} />
+        </Clause>
+        <Clause note="Signed" quietOnMobile sub={`Kottayam, ${formatReportDate()}`}>
+          <Closing />
+        </Clause>
+      </Sheet>
     </>
   );
 }
-

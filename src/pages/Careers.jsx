@@ -1,57 +1,44 @@
-import CTASection from '../components/CTASection.jsx';
 import SEO from '../components/SEO.jsx';
+import { Clause, PageHead, Sheet } from '../components/Report.jsx';
+import { Closing } from '../components/Sections.jsx';
+
+const openings = [
+  { ref: '(a)', title: 'Articleship.', text: 'CA articleship across audit, income tax, GST and accounting engagements.' },
+  { ref: '(b)', title: 'Internship.', text: 'Short placements in accounting, tax support, documentation and compliance.' },
+  { ref: '(c)', title: 'Qualified roles.', text: 'Positions for qualified and semi-qualified professionals in audit, tax, GST, ROC and advisory.' }
+];
 
 export default function Careers() {
   return (
     <>
       <SEO
         title="Careers and Articleship | RJS & Co."
-        description="Explore careers, articleship, internship, and professional learning opportunities at RJS & Co."
+        description="Articleship, internship and qualified roles at RJS & Co., Chartered Accountants, Kottayam."
         path="/careers"
       />
 
-      <section className="page-hero section">
-        <div className="container narrow">
-          <p className="eyebrow">Careers and Articleship</p>
-          <h1>Build practical exposure in tax, audit, accounting, compliance, and advisory.</h1>
-          <p>
-            Articleship, internship, and experienced-professional openings at RJS & Co.
-          </p>
-        </div>
-      </section>
-
-      <section className="section">
-        <div className="container split-grid">
-          <div>
-            <p className="eyebrow">Learning environment</p>
-            <h2>For candidates who want disciplined professional exposure.</h2>
-          </div>
-          <div className="content-stack">
-            <p>
-              Articles, interns, and experienced professionals work directly on live tax, audit, accounting, and compliance engagements, with structured review at every stage.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section className="section soft-section">
-        <div className="container">
-          <div className="feature-grid">
-            <article className="feature-card"><span>01</span><h2>Articleship</h2><p>Structured CA articleship exposure across audit, tax, GST, and accounting engagements.</p></article>
-            <article className="feature-card"><span>02</span><h2>Internship</h2><p>Short-term roles in accounting, tax support, documentation, and compliance operations.</p></article>
-            <article className="feature-card"><span>03</span><h2>Experienced roles</h2><p>Positions for qualified and semi-qualified professionals in audit, taxation, GST, ROC, and advisory.</p></article>
-          </div>
-        </div>
-      </section>
-
-      <CTASection
-        title="Interested in working with RJS & Co.?"
-        description="Share your CV and area of interest, and the team will get back to you about current openings."
-        primaryLabel="Contact the firm"
-        primaryPath="/contact"
-        secondaryLabel="View services"
-        secondaryPath="/services"
-      />
+      <Sheet label="Careers">
+        <PageHead
+          note="Careers"
+          title="Articleship and roles at RJS & Co."
+          lead="Articles, interns and qualified staff work on live audit, tax and compliance engagements, with a partner reviewing their work."
+        />
+        <Clause note="Openings">
+          <ol className="paras">
+            {openings.map((item) => (
+              <li key={item.ref} data-ref={item.ref}>
+                <div>
+                  <h2 style={{ display: 'inline', font: 'inherit', fontWeight: 600, color: 'var(--navy)' }}>{item.title}</h2>{' '}
+                  <p>{item.text}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
+        </Clause>
+        <Clause note="Apply">
+          <Closing statement="Send your CV and the work you want to do." lead="Tell us your stage (articles, intern or qualified) and the area you want to work in." />
+        </Clause>
+      </Sheet>
     </>
   );
 }

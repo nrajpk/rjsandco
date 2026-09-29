@@ -1,68 +1,57 @@
-import CTASection from '../components/CTASection.jsx';
 import SEO from '../components/SEO.jsx';
-import SectionHeading from '../components/SectionHeading.jsx';
+import { Clause, PageHead, Sheet } from '../components/Report.jsx';
+import { Closing, KeyMatters } from '../components/Sections.jsx';
 import { industries } from '../data/industries.js';
 
 export default function Industries() {
   return (
     <>
       <SEO
-        title="Industries and Clients Served | RJS & Co."
-        description="RJS & Co. serves startups, MSMEs, private limited companies, partnership firms, professionals, consultants, NRIs, trading businesses, service businesses, and non-profits."
+        title="Who We Act For | RJS & Co., Chartered Accountants"
+        description="Companies, startups, MSMEs, firms and LLPs, professionals, NRIs, trading and service businesses, trusts and non-profits. RJS & Co., Kottayam."
         path="/industries"
       />
 
-      <section className="page-hero section">
-        <div className="container narrow">
-          <p className="eyebrow">Who we serve</p>
-          <h1>Professional finance and compliance support for different client realities.</h1>
-          <p>
-            A startup, NRI, trading business, and non-profit do not have the same compliance concerns. RJS & Co. structures advice around the client type and practical risk.
-          </p>
-        </div>
-      </section>
-
-      <section className="section soft-section">
-        <div className="container">
-          <SectionHeading
-            eyebrow="Client groups"
-            title="Industries and client segments"
-            description="The goal is not to sell every service to everyone. The right support depends on entity type, stage, tax exposure, and reporting needs."
-            align="center"
-          />
-          <div className="mini-grid industries-grid">
+      <Sheet page={1} total={2} label="Who we act for">
+        <PageHead
+          note="Who we act for"
+          title="Different entities carry different obligations."
+          lead="A startup, an NRI selling a flat and a charitable trust face different filings, different risks and different deadlines. We start from what kind of client you are."
+        />
+        <Clause note="Clients">
+          <ul className="ledger-list">
             {industries.map((industry) => (
-              <article className="mini-card" key={industry.title}>
+              <li key={industry.title}>
                 <h2>{industry.title}</h2>
                 <p>{industry.description}</p>
-              </article>
+              </li>
             ))}
-          </div>
-        </div>
-      </section>
+          </ul>
+        </Clause>
+      </Sheet>
 
-      <section className="section">
-        <div className="container split-grid">
-          <div>
-            <p className="eyebrow">Client-first approach</p>
-            <h2>Start with the problem, not the form name.</h2>
-          </div>
-          <div className="content-stack">
+      <Sheet page={2} total={2} label="Where to start">
+        <Clause note="Where to start" quietOnMobile>
+          <p className="statement">Start with the problem. We will find the form.</p>
+          <div className="prose" style={{ marginTop: 20 }}>
             <p>
-              Most clients do not arrive asking for a perfect technical service category. They ask because a deadline is close, a notice has arrived, books are messy, GST credit is blocked, a company needs to be formed, or management needs better numbers.
+              Few clients arrive asking for a service by its technical name. They come because a deadline is close, a
+              notice has arrived, the books will not reconcile, GST credit is blocked, a company needs forming, or the
+              board wants better numbers.
             </p>
             <p>
-              RJS & Co. first understands the situation, then maps the relevant combination of tax, accounting, GST, ROC, payroll, audit, or advisory support.
+              We look at the situation first, then assemble the right mix of tax, accounting, GST, ROC, payroll, audit or
+              advisory work.
             </p>
           </div>
-        </div>
-      </section>
-
-      <CTASection
-        title="Not sure which service applies to your case?"
-        description="Share your client type, issue, and deadline. RJS & Co. can help identify the right service path."
-      />
+        </Clause>
+        <Clause title="Key matters" sub="What brings clients to us">
+          <KeyMatters />
+        </Clause>
+        <Clause note="Signed" quietOnMobile>
+          <Closing statement="Not sure which desk you need?" lead="Tell us what kind of entity you are, what happened and when it is due. We will tell you which desk takes it and what we need from you." />
+        </Clause>
+      </Sheet>
     </>
   );
 }
-

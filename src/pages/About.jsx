@@ -1,84 +1,87 @@
-import CTASection from '../components/CTASection.jsx';
 import SEO from '../components/SEO.jsx';
-import SectionHeading from '../components/SectionHeading.jsx';
+import Partners from '../components/Partners.jsx';
+import { Clause, Fields, PageHead, Sheet } from '../components/Report.jsx';
+import { Closing } from '../components/Sections.jsx';
+import { firmFacts } from '../data/firmFacts.js';
+import { siteConfig } from '../data/siteConfig.js';
+
+const responsibilities = [
+  {
+    ref: '(a)',
+    title: 'Confidentiality.',
+    text: 'Your ledgers, returns and payroll data stay with the people on your engagement. We agree with you how documents reach us.'
+  },
+  {
+    ref: '(b)',
+    title: 'Scope and fee in writing.',
+    text: 'You know what we will do, what we need from you, when it will be done and what it costs before we begin.'
+  },
+  {
+    ref: '(c)',
+    title: 'Deadlines.',
+    text: 'We plan each engagement backwards from its statutory date, and we tell you early when something is missing.'
+  },
+  {
+    ref: '(d)',
+    title: 'Advice you can keep.',
+    text: 'When a decision depends on our advice, we put the advice in writing with the facts and the law it rests on.'
+  },
+  {
+    ref: '(e)',
+    title: 'Independence.',
+    text: 'We follow the ICAI Code of Ethics, and we decline audit work where our independence could be questioned.'
+  }
+];
 
 export default function About() {
   return (
     <>
       <SEO
-        title="About RJS & Co. | Chartered Accountants and Business Advisors"
-        description="Learn about RJS & Co., a professional CA firm focused on practical tax, audit, accounting, compliance, and business advisory support in India."
+        title="The Firm | RJS & Co., Chartered Accountants, Kottayam"
+        description="RJS & Co. is a partnership of Chartered Accountants in Kottayam, Kerala, registered with the ICAI. Meet the partners and read how the firm works."
         path="/about"
       />
 
-      <section className="page-hero section">
-        <div className="container narrow">
-          <p className="eyebrow">About RJS & Co.</p>
-          <h1>A CA firm built around clarity, compliance discipline, and practical business support.</h1>
-          <p>
-            RJS & Co. supports Indian businesses, professionals, startups, MSMEs, and NRIs with taxation, audit, GST, accounting, ROC, payroll, and advisory services.
-          </p>
-        </div>
-      </section>
-
-      <section className="section">
-        <div className="container split-grid">
-          <div>
-            <p className="eyebrow">Firm introduction</p>
-            <h2>Professional services should make decisions easier, not more complicated.</h2>
-          </div>
-          <div className="content-stack">
-            <p>
-              RJS & Co. is positioned for clients who want a dependable advisor for recurring compliance and important financial decisions. The firm combines technical CA services with a practical, business-first way of working.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section className="section soft-section">
-        <div className="container value-grid">
-          <article className="value-card">
-            <h2>Mission</h2>
-            <p>To help clients stay compliant, understand their numbers, and make finance decisions with confidence.</p>
-          </article>
-          <article className="value-card">
-            <h2>Values</h2>
-            <ul>
-              <li>Professional integrity</li>
-              <li>Confidentiality</li>
-              <li>Clear communication</li>
-              <li>Deadline discipline</li>
-              <li>Practical advisory</li>
-            </ul>
-          </article>
-          <article className="value-card">
-            <h2>How we work</h2>
-            <p>Each engagement starts with scope clarity, document checklists, realistic timelines, and a focused execution path.</p>
-          </article>
-        </div>
-      </section>
-
-      <section className="section">
-        <div className="container">
-          <SectionHeading
-            eyebrow="Trust section"
-            title="Built for sensitive financial work"
-            description="Tax records, business accounts, payroll information, and compliance documents require care. RJS & Co. is designed around confidentiality, accuracy, and accountable delivery."
-            align="center"
+      <Sheet page={1} total={2} label="The firm">
+        <PageHead
+          note="The firm"
+          title="A practice of Chartered Accountants, run by its partners."
+          lead={`RJS & Co. has practised in Kottayam since ${firmFacts.established}. We act for companies, firms, trusts, founders and NRI families on audit, tax, company law and advisory work.`}
+        />
+        <Clause note="Constitution">
+          <Fields
+            rows={[
+              { label: 'Name', value: 'RJS & Co., Chartered Accountants' },
+              { label: 'Constitution', value: firmFacts.constitution },
+              { label: 'ICAI FRN', value: firmFacts.frn },
+              { label: 'Established', value: firmFacts.established },
+              { label: 'Peer review', value: firmFacts.peerReview },
+              { label: 'Team', value: firmFacts.teamSize },
+              { label: 'Office', value: siteConfig.address }
+            ]}
           />
-          <div className="feature-grid">
-            <article className="feature-card"><span>01</span><h3>Confidential records</h3><p>Client financial data should be handled through secure, organised, and access-controlled processes.</p></article>
-            <article className="feature-card"><span>02</span><h3>Documented advice</h3><p>Important matters are handled with proper records, explanations, and supporting documents.</p></article>
-            <article className="feature-card"><span>03</span><h3>Practical follow-through</h3><p>The focus is not only filing. It is helping clients know what happens next and what to prepare for.</p></article>
-          </div>
-        </div>
-      </section>
+        </Clause>
+        <Clause note="The partners">
+          <Partners headingLevel={3} />
+        </Clause>
+      </Sheet>
 
-      <CTASection
-        title="Looking for a CA firm that explains the next step clearly?"
-        description="Share your requirement and RJS & Co. will help identify the right service path, documents needed, and likely scope."
-      />
+      <Sheet page={2} total={2} label="Our responsibilities">
+        <Clause note="Our responsibilities" sub="To every client">
+          <ol className="paras">
+            {responsibilities.map((item) => (
+              <li key={item.ref} data-ref={item.ref}>
+                <div>
+                  <h3>{item.title}</h3> <p>{item.text}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
+        </Clause>
+        <Clause note="Signed" quietOnMobile>
+          <Closing statement="Talk to a partner about your matter." />
+        </Clause>
+      </Sheet>
     </>
   );
 }
-

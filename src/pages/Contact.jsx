@@ -1,56 +1,67 @@
 import ContactForm from '../components/ContactForm.jsx';
 import SEO from '../components/SEO.jsx';
-import { siteConfig } from '../data/siteConfig.js';
+import { Clause, Fields, PageHead, Sheet, WhatsAppIcon } from '../components/Report.jsx';
+import { siteConfig, whatsappHref } from '../data/siteConfig.js';
+import { firmFacts } from '../data/firmFacts.js';
 
 export default function Contact() {
   return (
     <>
       <SEO
-        title="Contact RJS & Co. | Book a Consultation"
-        description="Contact RJS & Co. for audit, tax, GST, accounting, ROC compliance, business setup, payroll, Virtual CFO, NRI taxation, and advisory support."
+        title="Contact RJS & Co. | Book a Consultation, Kottayam"
+        description="Book a consultation with RJS & Co., Chartered Accountants, Kottayam, for audit, tax, GST, company law, payroll, Virtual CFO or NRI taxation."
         path="/contact"
       />
 
-      <section className="page-hero section">
-        <div className="container narrow">
-          <p className="eyebrow">Contact</p>
-          <h1>Book a consultation with RJS & Co.</h1>
-          <p>
-            Share your requirement, deadline, and current compliance status. The form opens your email app with the enquiry details filled in.
-          </p>
-        </div>
-      </section>
+      <Sheet label="Book a consultation">
+        <PageHead
+          note="Engagement enquiry"
+          title="Book a consultation."
+          lead="Tell us the matter, the deadline and where things stand. We reply with the likely scope, the documents we need and a fee estimate."
+        />
 
-      <section className="section contact-section">
-        <div className="container contact-grid">
-          <div className="contact-panel">
-            <h2>Send an enquiry</h2>
-            <p>Use the form below to share your requirement. Avoid uploading sensitive documents until a secure process is confirmed.</p>
+        <Clause note="Your matter" sub="All fields required">
+          <div className="contact-grid">
             <ContactForm />
-          </div>
 
-          <aside className="contact-details" aria-label="Contact details">
-            <div className="contact-card">
-              <h2>Office details</h2>
-              <p><strong>Address:</strong> {siteConfig.address}</p>
-              <p><strong>Email:</strong> <a href={siteConfig.emailHref}>{siteConfig.email}</a></p>
-              <p><strong>WhatsApp:</strong> {siteConfig.whatsappLabel}</p>
-            </div>
-            <div className="map-preview">
-              <iframe
-                title="RJS & Co. office location on Google Maps"
-                src={siteConfig.mapEmbedHref}
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                allowFullScreen
+            <aside className="office" aria-label="Office details">
+              <Fields
+                rows={[
+                  { label: 'Office', value: siteConfig.address },
+                  { label: 'Email', value: <a className="inline-link" href={siteConfig.emailHref}>{siteConfig.email}</a> },
+                  firmFacts.phone && { label: 'Phone', value: <a className="inline-link" href={firmFacts.phoneHref}>{firmFacts.phone}</a> },
+                  {
+                    label: 'Support Desk',
+                    value: (
+                      <a className="inline-link" href={whatsappHref} target="_blank" rel="noreferrer">
+                        WhatsApp {siteConfig.whatsappLabel}
+                      </a>
+                    )
+                  }
+                ].filter(Boolean)}
               />
-              <a href={siteConfig.mapHref} target="_blank" rel="noreferrer">
+              <a className="btn btn-quiet" href={whatsappHref} target="_blank" rel="noreferrer" style={{ justifySelf: 'start' }}>
+                <span style={{ width: 20, height: 20, color: '#1f8f4e', display: 'inline-flex' }}>
+                  <WhatsAppIcon />
+                </span>
+                Message on WhatsApp
+              </a>
+              <div className="map-frame">
+                <iframe
+                  title="RJS & Co. office on Google Maps"
+                  src={siteConfig.mapEmbedHref}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  allowFullScreen
+                />
+              </div>
+              <a className="text-link" href={siteConfig.mapHref} target="_blank" rel="noreferrer">
                 {siteConfig.mapLabel}
               </a>
-            </div>
-          </aside>
-        </div>
-      </section>
+            </aside>
+          </div>
+        </Clause>
+      </Sheet>
     </>
   );
 }

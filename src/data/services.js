@@ -3,135 +3,131 @@ export const services = [
     slug: 'audit-assurance',
     title: 'Audit & Assurance',
     shortTitle: 'Audit',
-    metaTitle: 'Audit & Assurance Services in India | RJS & Co.',
+    metaTitle: 'Statutory, Tax and Internal Audit in Kottayam | RJS & Co.',
     metaDescription:
-      'Audit and assurance support for companies, firms, trusts, and growing businesses. RJS & Co. helps with statutory audit coordination, internal controls, tax audit, and audit readiness.',
-    excerpt:
-      'Avoid penalties and weak reporting with structured audit support, documentation review, and control-focused assurance.',
+      'Statutory audit, tax audit, internal audit and audit readiness for companies, firms, trusts and non-profits. RJS & Co., Chartered Accountants, Kottayam.',
+    excerpt: 'Statutory, tax and internal audit, with the reconciliations and schedules prepared before fieldwork starts.',
     intro:
-      'Reliable audit support is not just about year-end compliance. It helps business owners understand financial discipline, detect gaps, and build confidence with banks, investors, regulators, and management teams.',
+      'A clean audit gives your bank, your investors and your board a set of numbers they can rely on. We audit companies, firms and trusts, and we help management get the books ready before the auditor arrives.',
     problem:
-      'Weak documentation, delayed reconciliations, unclear ledgers, and last-minute audit preparation can create avoidable risk, penalties, and management confusion.',
+      'Audits run late when bank reconciliations are pending, invoices are missing, loans and advances are unexplained, or GST and TDS do not match the books. Each gap turns into an audit query.',
     whoFor: [
-      'Private limited companies preparing for statutory audit',
-      'Firms and proprietors requiring tax audit support',
-      'Trusts and non-profits needing reliable audit coordination',
-      'Businesses that want stronger internal controls and reporting discipline'
+      'Private limited companies due for statutory audit',
+      'Firms and proprietors who cross the tax audit threshold under Section 44AB',
+      'Trusts and non-profits that need audited accounts for registration or grants',
+      'Businesses that want an internal review of controls and processes'
     ],
     helpsWith: [
       'Statutory audit preparation and coordination',
-      'Tax audit support and documentation review',
+      'Tax audit and Form 3CA/3CB/3CD reporting',
       'Internal control review and process gap identification',
       'Ledger scrutiny and reconciliation checks',
-      'Audit schedules, confirmations, and supporting documentation',
-      'Management observations and practical improvement notes'
+      'Audit schedules, balance confirmations and supporting papers',
+      'Management letters with specific, actionable observations'
     ],
     benefits: [
-      'Better audit readiness before deadlines',
-      'Cleaner books and stronger documentation',
-      'Reduced risk of compliance gaps',
-      'Improved confidence for lenders and stakeholders',
-      'Practical recommendations instead of only technical observations'
+      'Audit schedules and reconciliations prepared before fieldwork',
+      'A list of open points, agreed with your team',
+      'The signed audit report, and the tax audit report where it applies',
+      'A management letter with specific observations in plain language'
     ],
     process: [
-      'Understand the entity, business model, and audit requirement',
-      'Collect trial balance, ledgers, returns, bank statements, and prior filings',
-      'Review reconciliations, major balances, statutory dues, and supporting documents',
-      'Prepare audit schedules and clarify open points',
-      'Coordinate final review, reporting, and management action points'
+      'We understand the entity, its business and the audit it needs',
+      'You share the trial balance, ledgers, returns, bank statements and prior filings',
+      'We review reconciliations, major balances, statutory dues and supporting papers',
+      'We prepare audit schedules and resolve open points with your team',
+      'A partner reviews the file, signs the report and walks you through the findings'
     ],
     documents: [
       'Financial statements and trial balance',
       'Ledger extracts and bank statements',
-      'GST and TDS return details where applicable',
+      'GST and TDS return details',
       'Fixed asset register and depreciation workings',
-      'Loan statements and confirmations',
-      'Prior year audit report, if available'
+      'Loan statements and balance confirmations',
+      'Prior year audit report'
     ],
-    turnaround: 'Timeline depends on entity size, book quality, pending reconciliations, and the audit scope.',
+    turnaround: 'Depends on the size of the entity, the state of the books and the audit scope. We agree a timetable at the start.',
     faqs: [
       {
-        question: 'Is audit only a statutory requirement?',
+        question: 'Is an audit only a statutory requirement?',
         answer:
-          'No. A well-run audit also improves financial discipline, internal controls, documentation quality, and management visibility.'
+          'The law requires it for many entities, and it also tells management where controls are weak and where the books need attention.'
       },
       {
         question: 'Can you help if my accounts are not audit-ready?',
         answer:
-          'Yes. RJS & Co. can review the current state of books, identify gaps, and help prepare the required schedules and reconciliations.'
+          'Yes. We review the books as they stand, list the gaps, and help you prepare the schedules and reconciliations the audit will need.'
       },
       {
-        question: 'What causes audit delays most often?',
+        question: 'What delays an audit most often?',
         answer:
-          'Pending bank reconciliations, missing invoices, unclear loans or advances, unreconciled GST or TDS, and incomplete supporting documents.'
+          'Pending bank reconciliations, missing invoices, unexplained loans or advances, GST or TDS that does not match the books, and incomplete supporting papers.'
       }
     ]
   },
   {
     slug: 'taxation-services',
-    title: 'Taxation Services',
-    shortTitle: 'Taxation',
-    metaTitle: 'Taxation Services and Income Tax Advisory | RJS & Co.',
+    title: 'Direct Tax',
+    shortTitle: 'Direct Tax',
+    metaTitle: 'Income Tax Filing, Planning and Notices | RJS & Co.',
     metaDescription:
-      'Income tax filing, tax planning, notices, advance tax, TDS, and advisory support for individuals, professionals, firms, startups, MSMEs, and companies in India.',
-    excerpt:
-      'Plan, file, and respond with confidence through structured income tax and advisory support.',
+      'Income tax returns, tax planning, advance tax, TDS, capital gains and notice replies for individuals, professionals, firms and companies. RJS & Co., Kottayam.',
+    excerpt: 'Returns, advance tax, TDS, capital gains, and replies to income tax notices.',
     intro:
-      'Tax decisions should not be made only at filing time. RJS & Co. helps clients understand tax exposure early, file accurately, and respond to notices with proper documentation.',
+      'Tax planning works before the year closes. We review your position early, file accurately, and prepare replies to notices with the papers to support them.',
     problem:
-      'Late tax planning, incorrect income classification, missed deductions, and poor documentation can lead to notices, interest, penalties, and cash flow strain.',
+      'Late planning, income reported under the wrong head, missed deductions and thin documentation lead to notices, interest and penalties, and they strain cash flow when the demand arrives.',
     whoFor: [
-      'Individuals and salaried taxpayers with multiple income sources',
-      'Professionals, consultants, and freelancers',
-      'Partnership firms, LLPs, startups, and MSMEs',
-      'Companies looking for tax planning and compliance discipline'
+      'Individuals with salary, rental, capital gains or foreign income',
+      'Professionals, consultants and freelancers',
+      'Partnership firms, LLPs, startups and MSMEs',
+      'Companies that want a planned tax position before year end'
     ],
     helpsWith: [
-      'Income tax return filing and review',
+      'Income tax return preparation and review',
       'Advance tax and self-assessment tax planning',
-      'TDS compliance and reconciliation support',
-      'Tax notice review and response preparation',
-      'Capital gains tax review',
+      'TDS compliance and reconciliation with Form 26AS',
+      'Replies to notices under Sections 139(9), 143(1), 143(2) and 148',
+      'Capital gains computation',
       'Tax planning for businesses and professionals'
     ],
     benefits: [
-      'Reduced last-minute filing stress',
-      'Clearer tax position before deadlines',
-      'Better documentation for deductions and claims',
-      'Professional response to tax notices',
-      'Improved cash flow planning through advance tax discipline'
+      'A computation of your tax position before the deadline',
+      'Deductions and claims matched to their documents',
+      'Notice replies with the evidence attached',
+      'An advance tax schedule, instalment by instalment'
     ],
     process: [
-      'Understand income sources, deductions, investments, and tax history',
-      'Collect Form 16, AIS, TIS, bank details, capital gains data, and business records',
-      'Review tax computation and identify risks or missed claims',
-      'Prepare and file the return or advisory note',
-      'Share acknowledgement, working summary, and next-step reminders'
+      'We review your income sources, deductions, investments and tax history',
+      'You share Form 16, AIS, TIS, bank details, capital gains statements and business records',
+      'We prepare the computation and flag risks or missed claims',
+      'We file the return or issue a written advisory note',
+      'You receive the acknowledgement, the working and reminders for the next dates'
     ],
     documents: [
       'PAN and Aadhaar details',
-      'Form 16, AIS, TIS, and Form 26AS',
+      'Form 16, AIS, TIS and Form 26AS',
       'Bank statements and interest certificates',
       'Investment and deduction proofs',
-      'Capital gains statements, if applicable',
-      'Business income and expense details, if applicable'
+      'Capital gains statements',
+      'Business income and expense details'
     ],
-    turnaround: 'Simple return filing can be completed faster when all documents are available. Complex cases require review time.',
+    turnaround: 'A straightforward return takes a few working days once we have the documents. Notices and complex cases take longer.',
     faqs: [
       {
-        question: 'Can tax planning be done after the financial year ends?',
+        question: 'Can I plan my tax after the financial year ends?',
         answer:
-          'Some review is possible, but real tax planning is strongest before the year closes because many decisions cannot be corrected later.'
+          'We can review the position, but most planning decisions have to be made before 31 March. After that, the options narrow.'
       },
       {
         question: 'Do I need to file if tax was already deducted?',
         answer:
-          'In many cases, yes. TDS does not automatically complete your filing obligation. Your total income, deductions, and reporting requirement must be reviewed.'
+          'Often, yes. TDS does not complete your filing obligation. We check your total income, deductions and reporting requirements to confirm.'
       },
       {
         question: 'Can you help with an income tax notice?',
         answer:
-          'Yes. Share the notice, return copy, computation, AIS, Form 26AS, and supporting documents so the issue can be reviewed properly.'
+          'Yes. Send us the notice, your return, the computation, AIS, Form 26AS and any supporting papers, and we will review the issue.'
       }
     ]
   },
@@ -139,178 +135,172 @@ export const services = [
     slug: 'gst-indirect-tax',
     title: 'GST & Indirect Tax',
     shortTitle: 'GST',
-    metaTitle: 'GST Registration, Filing and Advisory | RJS & Co.',
+    metaTitle: 'GST Registration, Returns, ITC and Notices | RJS & Co.',
     metaDescription:
-      'GST registration, return filing, ITC reconciliation, refund support, notice response, and indirect tax advisory for Indian businesses and professionals.',
-    excerpt:
-      'Keep GST filing, ITC claims, reconciliations, and notices under control with practical compliance support.',
+      'GST registration, GSTR-1 and GSTR-3B filing, input tax credit reconciliation, refunds, annual returns and notice replies. RJS & Co., Kottayam.',
+    excerpt: 'Monthly returns, input tax credit reconciliation, refunds and notice replies.',
     intro:
-      'GST compliance affects cash flow directly. RJS & Co. helps businesses file on time, claim eligible input tax credit carefully, reconcile vendor data, and respond to GST queries with proper records.',
+      'GST moves your cash. We file on time, claim the credit you are entitled to, reconcile it against what your suppliers filed, and answer department queries from your own records.',
     problem:
-      'Incorrect GST filing can block input credit, create mismatch notices, delay refunds, and damage working capital.',
+      'A wrong return can block input tax credit, trigger a mismatch notice, hold up a refund and tie up working capital for months.',
     whoFor: [
       'Trading and service businesses registered under GST',
-      'Startups and MSMEs crossing GST thresholds',
-      'Professionals and consultants issuing taxable invoices',
-      'Businesses facing GST notices, mismatches, or refund delays'
+      'Startups and MSMEs crossing the registration threshold',
+      'Professionals and consultants who raise taxable invoices',
+      'Businesses facing GST notices, mismatches or refund delays'
     ],
     helpsWith: [
-      'GST registration and amendment support',
-      'GSTR-1 and GSTR-3B filing support',
-      'Input tax credit reconciliation',
-      'GST refund documentation support',
-      'E-invoicing and e-way bill process guidance',
-      'GST notice review and response preparation'
+      'GST registration and amendments',
+      'GSTR-1 and GSTR-3B filing',
+      'Input tax credit reconciliation with GSTR-2B',
+      'GSTR-9 and GSTR-9C annual returns',
+      'Refund applications and supporting documents',
+      'E-invoicing and e-way bill processes',
+      'Replies to GST notices and scrutiny'
     ],
     benefits: [
-      'On-time GST return discipline',
-      'Cleaner ITC claims and fewer mismatches',
-      'Better vendor and customer reconciliation',
-      'Reduced risk of interest and penalties',
-      'Improved cash flow visibility'
+      'A return summary for your approval before each filing',
+      'An ITC reconciliation against GSTR-2B',
+      'A list of supplier mismatches to follow up',
+      'A monthly figure for GST payable'
     ],
     process: [
-      'Review GST registration, business activity, and filing history',
-      'Collect sales, purchase, credit note, debit note, and expense data',
-      'Reconcile books with GST portal data',
-      'Prepare return summaries and open-point list',
-      'File returns after confirmation and maintain compliance records'
+      'We review your registration, business activity and filing history',
+      'You share sales, purchases, credit and debit notes and expense data',
+      'We reconcile your books with the GST portal',
+      'We send you a return summary and a list of open points',
+      'We file after your confirmation and keep the working on record'
     ],
     documents: [
       'GST registration certificate',
       'Sales and purchase registers',
       'Expense invoices with GST',
       'Credit notes and debit notes',
-      'E-way bill or e-invoice details where applicable',
-      'GST portal access or reports'
+      'E-way bill and e-invoice details',
+      'GST portal access or downloaded reports'
     ],
-    turnaround: 'Monthly filing timelines depend on transaction volume, data quality, and reconciliation requirements.',
+    turnaround: 'Monthly filing depends on transaction volume and how clean the data is when it reaches us.',
     faqs: [
       {
         question: 'Why does GST reconciliation matter?',
         answer:
-          'Reconciliation helps verify whether the credit claimed in books matches supplier filings and portal data. This reduces future disputes.'
+          'It confirms that the credit in your books matches what your suppliers reported. Mismatches found early are cheaper than mismatches found in a notice.'
       },
       {
-        question: 'Can I claim all GST paid on purchases?',
+        question: 'Can I claim all the GST I paid on purchases?',
         answer:
-          'No. Eligibility depends on GST law, business use, vendor filing status, documentation, and restrictions applicable to the expense.'
+          'No. Eligibility depends on the law, business use, the supplier filing their return, your documents, and the blocked-credit rules under Section 17(5).'
       },
       {
-        question: 'Can RJS & Co. help with GST notices?',
+        question: 'Can you reply to a GST notice for me?',
         answer:
-          'Yes. Share the notice, return data, reconciliation workings, invoices, and portal reports for a structured review.'
+          'Yes. Send the notice, your return data, reconciliation workings, invoices and portal reports, and we will prepare the reply.'
       }
     ]
   },
   {
     slug: 'accounting-bookkeeping',
     title: 'Accounting & Bookkeeping',
-    shortTitle: 'Accounting',
-    metaTitle: 'Accounting and Bookkeeping Services | RJS & Co.',
+    shortTitle: 'Accounts',
+    metaTitle: 'Accounting, Bookkeeping and MIS | RJS & Co.',
     metaDescription:
-      'Professional accounting, bookkeeping, ledger review, reconciliations, MIS reporting, and financial record maintenance for startups, MSMEs, and growing businesses.',
-    excerpt:
-      'Keep books clean, reconciled, and decision-ready instead of waiting until tax or audit season.',
+      'Bookkeeping, reconciliations, monthly accounts, MIS and clean-up of prior periods for startups, MSMEs and growing businesses. RJS & Co., Kottayam.',
+    excerpt: 'Monthly books, reconciliations and management accounts you can read.',
     intro:
-      'Good accounting is a management tool, not just a compliance task. RJS & Co. helps businesses maintain accurate books, reconcile accounts, and read their numbers with clarity.',
+      'Accurate books let you file on time and make decisions from real numbers. We keep your accounts current, reconcile them every month, and report them in a form you can use.',
     problem:
-      'Delayed entries, unreconciled banks, unclear receivables, and weak expense classification make tax filing harder and business decisions unreliable.',
+      'Late entries, unreconciled bank accounts, unclear receivables and loose expense coding make every filing harder and every decision a guess.',
     whoFor: [
       'Startups setting up accounts for the first time',
-      'MSMEs needing monthly bookkeeping support',
-      'Service and trading businesses with recurring transactions',
-      'Business owners who need clear monthly financial summaries'
+      'MSMEs that need monthly bookkeeping',
+      'Service and trading businesses with high transaction volume',
+      'Owners who want a monthly summary they can read in ten minutes'
     ],
     helpsWith: [
       'Bookkeeping and ledger maintenance',
-      'Bank, vendor, and customer reconciliations',
+      'Bank, vendor and customer reconciliations',
       'Expense classification and documentation review',
-      'Monthly profit and loss, balance sheet, and cash flow summaries',
-      'Receivable and payable ageing review',
-      'Accounting cleanup for prior periods'
+      'Monthly profit and loss, balance sheet and cash flow',
+      'Receivable and payable ageing',
+      'Clean-up of prior periods'
     ],
     benefits: [
-      'Cleaner tax and GST filing data',
-      'Better cash flow visibility',
-      'Reduced year-end accounting pressure',
-      'More reliable business decisions',
-      'Improved readiness for audit, loans, and investor discussions'
+      'Books reconciled every month',
+      'A monthly profit and loss, balance sheet and cash summary',
+      'Receivable and payable ageing',
+      'Year-end schedules ready for your auditor'
     ],
     process: [
-      'Understand business model, transaction flow, and reporting needs',
-      'Set up chart of accounts and bookkeeping process',
-      'Collect bank statements, invoices, bills, and payment records',
-      'Update accounts and reconcile balances',
-      'Share monthly reports and open issues for action'
+      'We map your business model, transaction flow and reporting needs',
+      'We set up the chart of accounts and a monthly routine',
+      'You share bank statements, invoices, bills and payment records',
+      'We post, reconcile and review the accounts',
+      'You receive monthly reports with a short list of open items'
     ],
     documents: [
       'Bank statements',
       'Sales invoices and purchase bills',
       'Expense receipts',
       'Loan and credit card statements',
-      'GST data where applicable',
-      'Prior accounting data, if available'
+      'GST data',
+      'Prior accounting data'
     ],
-    turnaround: 'Monthly bookkeeping depends on transaction volume and how quickly documents are shared.',
+    turnaround: 'Monthly bookkeeping follows a fixed calendar once documents arrive on time.',
     faqs: [
       {
         question: 'Can you clean up old accounts?',
         answer:
-          'Yes. RJS & Co. can review prior data, identify gaps, reconcile key balances, and create a cleaner base for future reporting.'
+          'Yes. We review prior data, list the gaps, reconcile the key balances and give you a clean opening position.'
       },
       {
-        question: 'How often should bookkeeping be updated?',
+        question: 'How often should the books be updated?',
         answer:
-          'Monthly is the minimum for most active businesses. Weekly tracking may be better for businesses with high transaction volume.'
+          'Monthly for most active businesses. Weekly if you process a high volume of transactions.'
       },
       {
-        question: 'Can I use my existing accounting software?',
-        answer:
-          'Usually yes. The process can be adapted to your existing accounting software, data exports, and reporting requirements.'
+        question: 'Can I keep my current accounting software?',
+        answer: 'Usually, yes. We adapt to the software you already use, or work from data exports.'
       }
     ]
   },
   {
     slug: 'roc-compliance',
-    title: 'Company Law & ROC Compliance',
-    shortTitle: 'ROC Compliance',
-    metaTitle: 'ROC Compliance and Company Law Support | RJS & Co.',
+    title: 'Company Law & ROC',
+    shortTitle: 'Company Law',
+    metaTitle: 'ROC Filings and Company Law Compliance | RJS & Co.',
     metaDescription:
-      'ROC annual filings, company law compliance, director KYC, board documentation, statutory registers, and MCA filing support for Indian companies and LLPs.',
-    excerpt:
-      'Keep your company active, compliant, and penalty-free with structured MCA and ROC filing support.',
+      'AOC-4 and MGT-7 annual filings, director KYC, board and general meeting records, statutory registers and MCA filings for companies and LLPs. RJS & Co., Kottayam.',
+    excerpt: 'Annual MCA filings, director KYC, board records and statutory registers.',
     intro:
-      'Company compliance is not only an annual formality. Proper records, board documentation, registers, and timely ROC filings protect the company and its directors.',
+      'Timely ROC filings and proper minutes protect the company and its directors. We keep your MCA record current and your statutory registers in order.',
     problem:
-      'Missed ROC filings, incorrect forms, expired director KYC, and poor documentation can create penalties, disqualification risk, and avoidable legal complications.',
+      'Missed ROC filings, wrong forms and lapsed director KYC bring additional fees, penalties and, in the worst case, director disqualification.',
     whoFor: [
       'Private limited companies',
       'LLPs and closely held businesses',
-      'Startups needing annual MCA compliance support',
-      'Directors who want clean compliance records'
+      'Startups that need annual MCA compliance',
+      'Directors who want a clean compliance record'
     ],
     helpsWith: [
-      'ROC annual filing support',
-      'Director KYC compliance',
-      'Board meeting and general meeting documentation',
-      'Statutory register maintenance guidance',
-      'MCA form preparation and filing coordination',
-      'Compliance calendar and deadline tracking'
+      'AOC-4 and MGT-7 annual filings',
+      'LLP Form 8 and Form 11',
+      'DIR-3 KYC for directors',
+      'Board and general meeting minutes',
+      'Statutory register maintenance',
+      'Event-based MCA forms and a compliance calendar'
     ],
     benefits: [
-      'Lower risk of penalties and late fees',
-      'Cleaner company records',
-      'Better readiness for investors, banks, and due diligence',
-      'Reduced director-level compliance anxiety',
-      'Structured reminders for recurring filings'
+      'A calendar of every MCA date for your company',
+      'Forms and board resolutions prepared for approval',
+      'Statutory registers kept up to date',
+      'Reminders ahead of each recurring filing'
     ],
     process: [
-      'Review company master data and filing history',
-      'Identify pending annual and event-based compliance requirements',
-      'Collect financial statements, board details, and supporting documents',
-      'Prepare required forms and compliance documents',
-      'File after confirmation and maintain records for future reference'
+      'We review the company master data and filing history',
+      'We list pending annual and event-based filings',
+      'You share financial statements, board details and supporting papers',
+      'We prepare the forms and the resolutions they need',
+      'We file after your approval and keep copies on record'
     ],
     documents: [
       'Certificate of incorporation',
@@ -318,364 +308,351 @@ export const services = [
       'Director details and DSC status',
       'Financial statements',
       'Shareholding details',
-      'Prior MCA filing records'
+      'Prior MCA filings'
     ],
-    turnaround: 'Routine annual compliance depends on company status, financial finalisation, DSC readiness, and pending filings.',
+    turnaround: 'Annual filings depend on the audit being complete and DSCs being valid. Event-based forms take a few working days.',
     faqs: [
       {
-        question: 'Is ROC filing required even if the company had no business?',
-        answer:
-          'Yes. Companies generally have annual filing obligations even when there is little or no business activity.'
+        question: 'Do I have to file with the ROC if the company had no business?',
+        answer: 'Yes. A company has annual filing obligations even in a year with little or no activity.'
       },
       {
-        question: 'What happens if ROC filing is delayed?',
+        question: 'What happens if an ROC filing is late?',
         answer:
-          'Delayed filings can result in additional fees, penalties, compliance flags, and future difficulties for directors and the company.'
+          'The MCA charges an additional fee for each day of delay, and continued default can lead to penalties on the company and its officers.'
       },
       {
-        question: 'Can RJS & Co. maintain a compliance calendar?',
-        answer:
-          'Yes. A simple compliance calendar can be maintained so recurring MCA, tax, GST, and payroll deadlines are visible.'
+        question: 'Can you keep a compliance calendar for us?',
+        answer: 'Yes. We track MCA, tax, GST and payroll dates for you and send reminders before each one.'
       }
     ]
   },
   {
     slug: 'business-setup',
-    title: 'Business Setup & Registration',
-    shortTitle: 'Business Setup',
-    metaTitle: 'Company Registration and Business Setup | RJS & Co.',
+    title: 'Business Setup',
+    shortTitle: 'Setup',
+    metaTitle: 'Company, LLP and Business Registration | RJS & Co.',
     metaDescription:
-      'Business setup, company registration, LLP registration, OPC, PAN, TAN, GST, MSME Udyam, and startup registration support in India.',
-    excerpt:
-      'Start your business with the right structure, clean documentation, and practical compliance planning from day one.',
+      'Choosing the right structure, then Private Limited, LLP, OPC and firm registration, with PAN, TAN, GST and Udyam. RJS & Co., Kottayam.',
+    excerpt: 'Choosing the right structure, then incorporation and every registration that follows.',
     intro:
-      'Start your business without regulatory headaches. RJS & Co. helps you choose the right structure, complete registrations, and prepare your business for banking, invoicing, accounting, and compliance.',
+      'The structure you choose decides your tax, your compliance cost and how you can raise money. We compare the options with you, then complete the registrations so you can open a bank account and start invoicing.',
     problem:
-      'Choosing the wrong structure or rushing registration without understanding compliance can create tax, funding, ownership, and operational problems later.',
+      'A structure picked in a hurry can cause tax, funding and ownership problems that cost more to unwind than to avoid.',
     whoFor: [
       'Founders starting a new business',
-      'Consultants and professionals formalising operations',
-      'Family businesses moving into a structured entity',
-      'Entrepreneurs comparing proprietorship, LLP, OPC, and private limited options'
+      'Consultants and professionals formalising their practice',
+      'Family businesses moving into a company or LLP',
+      'Anyone comparing proprietorship, partnership, LLP, OPC and private limited'
     ],
     helpsWith: [
-      'Entity structure selection guidance',
-      'Private Limited, LLP, OPC, and firm registration support',
-      'Name approval coordination',
-      'DSC and DIN process guidance',
-      'MOA, AOA, PAN, TAN, and related registration support',
-      'GST and Udyam registration where applicable'
+      'Advice on the right structure',
+      'Private Limited, LLP, OPC and partnership registration',
+      'Name approval',
+      'DSC and DIN',
+      'MOA, AOA, PAN and TAN',
+      'GST and Udyam registration'
     ],
     benefits: [
-      'Clear structure before registration',
-      'Reduced documentation confusion',
-      'Better readiness for bank account opening and invoicing',
-      'Cleaner ownership and compliance base',
-      'Practical understanding of future filing responsibilities'
+      'A written comparison of the structures that fit your plans',
+      'Incorporation and registrations completed in order',
+      'The documents your bank asks for to open an account',
+      'A written list of your filing obligations from day one'
     ],
     process: [
-      'Understand business activity, ownership, funding plans, and tax expectations',
-      'Recommend suitable structure with practical pros and cons',
-      'Collect KYC and registered address documents',
-      'Prepare registration documents and coordinate filing',
-      'Share post-registration compliance checklist'
+      'We discuss the business, ownership, funding plans and tax position',
+      'We recommend a structure and explain the trade-offs',
+      'You share KYC and registered office documents',
+      'We prepare and file the incorporation documents',
+      'You receive a post-registration compliance checklist'
     ],
     documents: [
       'PAN of promoters or partners',
-      'Aadhaar or identity proof',
+      'Aadhaar or other identity proof',
       'Recent bank statement or address proof',
-      'Passport-size photographs where required',
-      'Registered office utility bill',
-      'NOC from premises owner, if applicable'
+      'Photographs where required',
+      'Utility bill for the registered office',
+      'NOC from the owner of the premises'
     ],
-    turnaround: 'Company incorporation commonly takes 7 to 10 working days when documents and approvals are in order. Timelines can vary.',
+    turnaround: 'A company is usually incorporated in 7 to 10 working days once documents and name approval are in place.',
     faqs: [
       {
         question: 'Should I register a Private Limited Company or an LLP?',
         answer:
-          'If you plan to raise venture capital, a Private Limited Company is often better. If you are a service business focused on lower compliance cost, an LLP may be practical. The final choice should be based on ownership, funding, tax, and compliance expectations.'
+          'If you plan to raise equity, a Private Limited Company is usually the better fit. For a service business that wants lower compliance cost, an LLP often works. We decide with you after looking at ownership, funding and tax.'
       },
       {
         question: 'Can I start as a proprietorship and convert later?',
         answer:
-          'Yes, but conversion can involve tax, registration, contract, and banking changes. It is better to decide after understanding your growth plans.'
+          'Yes, but conversion touches tax, registrations, contracts and bank accounts. It is cheaper to choose with your growth plans in mind.'
       },
       {
-        question: 'Do I need GST registration immediately?',
+        question: 'Do I need GST registration straight away?',
         answer:
-          'It depends on turnover, state, nature of supply, e-commerce involvement, and client requirements. RJS & Co. can review applicability before registration.'
+          'It depends on turnover, your state, the nature of supply, e-commerce sales and what your clients require. We check before you register.'
       }
     ]
   },
   {
     slug: 'payroll-hr-compliance',
-    title: 'Payroll & HR Compliance',
+    title: 'Payroll & Labour Compliance',
     shortTitle: 'Payroll',
-    metaTitle: 'Payroll and HR Compliance Services | RJS & Co.',
+    metaTitle: 'Payroll, PF, ESI and Salary TDS | RJS & Co.',
     metaDescription:
-      'Payroll processing, salary structuring, TDS on salary, PF, ESI, professional tax, payslips, and HR compliance support for Indian employers.',
-    excerpt:
-      'Run payroll with clean salary records, statutory deductions, payslips, and compliance discipline.',
+      'Monthly payroll, payslips, salary TDS, PF, ESI and professional tax for Indian employers. RJS & Co., Kottayam.',
+    excerpt: 'Monthly payroll, payslips, salary TDS, PF, ESI and professional tax.',
     intro:
-      'Payroll mistakes affect employees, compliance, and trust. RJS & Co. helps businesses create a structured payroll process aligned with tax and statutory requirements.',
+      'Payroll errors reach your employees before they reach you. We run a monthly payroll that gets deductions right and keeps statutory filings on time.',
     problem:
-      'Incorrect salary deductions, delayed filings, weak records, and unclear payslips can lead to employee dissatisfaction and compliance exposure.',
+      'Wrong deductions, late PF or ESI payments and unclear payslips upset staff and create exposure under tax and labour law.',
     whoFor: [
       'Startups hiring their first employees',
-      'MSMEs with monthly payroll requirements',
-      'Businesses needing salary TDS and compliance support',
-      'Employers seeking organised payroll records and payslips'
+      'MSMEs with a monthly payroll',
+      'Employers who need salary TDS handled correctly',
+      'Teams that want organised payroll records and payslips'
     ],
     helpsWith: [
       'Monthly payroll computation',
-      'Payslip preparation',
-      'Salary TDS support',
-      'PF, ESI, and professional tax coordination where applicable',
-      'Employee reimbursement and deduction tracking',
-      'Payroll reports for management review'
+      'Payslips',
+      'Salary TDS and Form 16',
+      'PF, ESI and professional tax',
+      'Reimbursements and deductions',
+      'Payroll reports for management'
     ],
     benefits: [
-      'Cleaner salary records',
-      'Better employee communication',
-      'Reduced statutory compliance gaps',
-      'Accurate salary cost visibility',
-      'Reliable monthly payroll process'
+      'A monthly payroll computation for your approval',
+      'Payslips for every employee',
+      'PF, ESI, PT and TDS payment data each month',
+      'A monthly salary cost report'
     ],
     process: [
-      'Review employee list, salary structure, and compliance applicability',
-      'Collect attendance, leave, reimbursement, and deduction data',
-      'Prepare payroll computation and review summary',
-      'Generate payslips and statutory data',
-      'Maintain monthly payroll records for future reference'
+      'We review the employee list, salary structures and which laws apply',
+      'You share attendance, leave, reimbursements and deductions each month',
+      'We compute payroll and send a summary for approval',
+      'We issue payslips and prepare statutory payments',
+      'We keep the monthly payroll record'
     ],
     documents: [
       'Employee master data',
-      'Salary structure details',
+      'Salary structures',
       'Attendance and leave records',
-      'Reimbursement details',
-      'Statutory registration details where applicable',
+      'Reimbursement claims',
+      'PF, ESI and PT registration details',
       'Bank payment records'
     ],
-    turnaround: 'Monthly payroll can be processed efficiently when employee data and attendance inputs are shared on time.',
+    turnaround: 'Payroll runs to a fixed monthly calendar once inputs arrive on time.',
     faqs: [
       {
         question: 'When does salary TDS apply?',
         answer:
-          'Salary TDS depends on estimated taxable salary after considering eligible deductions and declarations. It should be reviewed during the year, not only at year-end.'
+          'When an employee’s estimated taxable salary, after declared deductions, crosses the exemption limit. Review it during the year, since a year-end correction is harder on the employee.'
       },
       {
-        question: 'Can payroll be handled for a small team?',
-        answer:
-          'Yes. Small teams benefit from structured payroll early because records remain clean as the company grows.'
+        question: 'Is outsourced payroll worth it for a small team?',
+        answer: 'Yes. Records set up correctly for five people still work for fifty.'
       },
       {
-        question: 'Do you provide HR legal advice?',
+        question: 'Do you give labour law opinions?',
         answer:
-          'RJS & Co. supports payroll and statutory compliance from a finance and compliance perspective. Legal drafting or labour law opinions may require specialist legal review.'
+          'We handle payroll and statutory compliance from the finance side. Employment contracts and labour law opinions need a lawyer, and we can work alongside yours.'
       }
     ]
   },
   {
     slug: 'virtual-cfo-advisory',
-    title: 'Virtual CFO / Business Advisory',
+    title: 'Virtual CFO',
     shortTitle: 'Virtual CFO',
-    metaTitle: 'Virtual CFO and Business Advisory Services | RJS & Co.',
+    metaTitle: 'Virtual CFO, MIS and Cash Flow Planning | RJS & Co.',
     metaDescription:
-      'Virtual CFO, management reporting, budgeting, cash flow planning, financial controls, MIS, and strategic finance advisory for startups and MSMEs.',
-    excerpt:
-      'Get board-level finance discipline, cash flow visibility, and decision support without hiring a full-time CFO.',
+      'Monthly MIS, cash flow and runway, budgets and forecasts, margin analysis and financial controls for startups and MSMEs. RJS & Co., Kottayam.',
+    excerpt: 'A monthly finance review with MIS, cash flow, budgets and margins, without a full-time CFO.',
     intro:
-      'Growing businesses need more than bookkeeping. RJS & Co. helps founders and management teams read financial signals, plan cash flow, review margins, and build better reporting discipline.',
+      'Revenue can grow while cash runs out. We give founders and management a monthly view of margins, cash and working capital, and sit with you to decide what to do about it.',
     problem:
-      'Businesses often grow revenue without understanding margins, cash cycles, working capital pressure, or financial risks until the damage is visible.',
+      'Many businesses find out about thin margins, slow collections or working capital pressure only when the bank balance says so.',
     whoFor: [
-      'Startups preparing for growth or funding discussions',
-      'MSMEs needing cash flow and profitability visibility',
-      'Founder-led businesses without a full-time finance head',
-      'Businesses looking for monthly MIS and advisory support'
+      'Startups preparing to raise money',
+      'MSMEs that need cash flow and profitability visibility',
+      'Founder-led businesses without a finance head',
+      'Businesses that want a monthly MIS and a review meeting'
     ],
     helpsWith: [
       'Monthly MIS and management reporting',
-      'Cash flow planning and runway visibility',
-      'Budgeting, forecasting, and variance review',
-      'Profitability and margin analysis',
-      'Financial process and control improvement',
-      'Founder and management advisory discussions'
+      'Cash flow planning and runway',
+      'Budgets, forecasts and variance review',
+      'Product and customer margin analysis',
+      'Finance processes and internal controls',
+      'Board and investor reporting packs'
     ],
     benefits: [
-      'Stronger decision-making from numbers',
-      'Better control over cash flow and working capital',
-      'Improved investor and lender readiness',
-      'Clearer monthly performance tracking',
-      'Finance leadership without full-time CFO cost'
+      'A monthly MIS pack in a format we agree',
+      'A rolling cash flow and runway forecast',
+      'Budget against actual, with the variances explained',
+      'A monthly review meeting, with decisions tracked'
     ],
     process: [
-      'Understand business goals, current accounts, and reporting gaps',
-      'Define monthly reporting format and key metrics',
-      'Review accounting data and correct reporting issues',
-      'Prepare MIS, cash flow, and action points',
-      'Discuss insights and track decisions month over month'
+      'We learn your goals, current accounts and reporting gaps',
+      'We agree the monthly report format and the metrics that matter',
+      'We correct the accounting data the reports depend on',
+      'We prepare the MIS, cash flow and action points',
+      'We meet each month to review decisions and track them'
     ],
     documents: [
       'Accounting data and ledgers',
       'Bank statements',
       'Sales pipeline and revenue data',
       'Expense and payroll data',
-      'Loan and investor details where applicable',
-      'Current reports, if available'
+      'Loan and investor agreements',
+      'Existing management reports'
     ],
-    turnaround: 'Initial setup may take a few weeks depending on data quality. Monthly reporting can then follow a fixed rhythm.',
+    turnaround: 'Set-up takes a few weeks, depending on the state of the data. Monthly reporting then runs to a fixed calendar.',
     faqs: [
       {
-        question: 'How is Virtual CFO different from bookkeeping?',
+        question: 'How is a Virtual CFO different from bookkeeping?',
         answer:
-          'Bookkeeping records transactions. Virtual CFO support interprets the numbers, improves controls, plans cash flow, and supports management decisions.'
+          'Bookkeeping records transactions. A Virtual CFO reads them, builds the forecast, tightens controls and helps you decide what to do next.'
       },
       {
-        question: 'Is Virtual CFO useful for a small business?',
+        question: 'Is a Virtual CFO useful for a small business?',
         answer:
-          'Yes, if the business has growth plans, cash flow pressure, multiple cost heads, investor discussions, or unclear profitability.'
+          'Yes, if you have growth plans, cash pressure, several cost heads, investor conversations or unclear profitability.'
       },
       {
-        question: 'Can you prepare investor-ready financial reports?',
+        question: 'Can you prepare investor reports?',
         answer:
-          'RJS & Co. can help organise financial reports and key metrics. Investor-specific documents may require additional founder and legal inputs.'
+          'We prepare the financial reports and key metrics. Investor-specific documents also need input from the founders and, often, legal counsel.'
       }
     ]
   },
   {
     slug: 'nri-taxation',
-    title: 'NRI Taxation & Advisory',
-    shortTitle: 'NRI Taxation',
-    metaTitle: 'NRI Taxation, DTAA and Repatriation Support | RJS & Co.',
+    title: 'NRI Desk',
+    shortTitle: 'NRI Desk',
+    metaTitle: 'NRI Taxation, Property Sale TDS, DTAA and 15CA/15CB | RJS & Co.',
     metaDescription:
-      'NRI taxation, Indian ITR filing, property sale TDS, Lower Deduction Certificate support, DTAA review, Form 15CA/15CB, and repatriation advisory.',
-    excerpt:
-      'Navigate Indian tax, TDS, DTAA, property transactions, and repatriation documentation with professional support.',
+      'Indian tax returns for NRIs, property sale TDS and lower deduction certificates, DTAA relief, capital gains and Form 15CA/15CB for repatriation. RJS & Co., Kottayam.',
+    excerpt: 'Indian returns, property sales, lower TDS certificates, DTAA relief and repatriation.',
     intro:
-      'Selling property in India or moving funds abroad should not become a tax shock. RJS & Co. helps NRIs review Indian tax obligations, TDS exposure, DTAA implications, and repatriation documentation.',
+      'Selling property in India or moving money abroad should not cost you more tax than the law requires. We work out your Indian tax, the TDS the buyer must deduct, the relief available under the tax treaty, and the paperwork your bank needs to remit the funds.',
     problem:
-      'NRIs can face high TDS on property sales, double taxation confusion, missed Indian return filing, and documentation delays during repatriation.',
+      'NRIs often face TDS on the full sale value of a property, confusion over double taxation, missed Indian returns, and weeks of delay at the bank during repatriation.',
     whoFor: [
-      'NRIs earning income in India',
-      'NRIs selling or renting Indian property',
-      'Families managing Indian tax compliance for overseas members',
-      'NRIs planning fund repatriation or DTAA claims'
+      'NRIs with rental, interest or capital gains income in India',
+      'NRIs selling or letting property in India',
+      'Families in Kerala handling Indian tax for relatives abroad',
+      'NRIs planning to repatriate funds or claim DTAA relief'
     ],
     helpsWith: [
-      'NRI income tax return filing',
+      'Indian income tax returns for NRIs',
       'Property sale tax and TDS review',
-      'Lower TDS certificate support where applicable',
-      'Form 15CA and 15CB coordination for repatriation',
-      'DTAA relief review and documentation support',
-      'Capital gains computation and advisory'
+      'Lower deduction certificates under Section 197',
+      'Form 15CA and 15CB for repatriation',
+      'DTAA relief and tax residency certificates',
+      'Capital gains computation'
     ],
     benefits: [
-      'Clear understanding of Indian tax exposure',
-      'Reduced risk of excessive or incorrect TDS handling',
-      'Better documentation for banks and tax authorities',
-      'Practical guidance for repatriation',
-      'Improved coordination for families handling matters from India'
+      'Your Indian tax position in writing before you sell',
+      'A lower deduction certificate application where you qualify',
+      'Form 15CB, and help filing Form 15CA',
+      'One contact in Kerala for matters handled from abroad'
     ],
     process: [
-      'Review residential status, income sources, and transaction details',
-      'Collect property, bank, TDS, and foreign tax documents where relevant',
-      'Compute Indian tax impact and documentation requirement',
-      'Prepare filing, certificate, or repatriation support documents',
-      'Share next steps and compliance reminders'
+      'We confirm your residential status, income sources and the transaction',
+      'You share property, bank, TDS and foreign tax documents',
+      'We compute the Indian tax and list the documents needed',
+      'We prepare the return, certificate application or remittance papers',
+      'You receive a summary of next steps and future dates'
     ],
     documents: [
-      'PAN and passport details',
-      'Residential status details',
+      'PAN and passport',
+      'Travel dates for residential status',
       'Indian income records',
-      'Property purchase and sale documents where applicable',
+      'Property purchase and sale documents',
       'TDS certificates and Form 26AS',
-      'Bank and repatriation documents where applicable'
+      'Bank and remittance documents'
     ],
-    turnaround: 'NRI matters vary based on property documents, bank requirements, certificate processing, and tax department timelines.',
+    turnaround: 'Returns take a few days. Lower deduction certificates depend on the tax department’s processing time, so start before you sign the sale agreement.',
     faqs: [
       {
-        question: 'Why is the buyer deducting high TDS on my property sale?',
+        question: 'Why is the buyer deducting so much TDS on my property sale?',
         answer:
-          'Indian tax rules may require significant TDS on property sold by NRIs. In eligible cases, a Lower Deduction Certificate may reduce the deduction after review and approval.'
+          'When the seller is an NRI, the buyer must deduct TDS on the capital gain at a high rate, and many buyers deduct on the full sale value to be safe. A lower deduction certificate under Section 197 can bring it down to the tax you owe.'
       },
       {
         question: 'Do NRIs need to file income tax returns in India?',
         answer:
-          'It depends on Indian income, TDS, capital gains, refund claims, and reporting requirements. The position should be reviewed each year.'
+          'It depends on your Indian income, TDS, capital gains and whether a refund is due. We review your position each year.'
       },
       {
-        question: 'Can you help with Form 15CA and 15CB?',
+        question: 'Can you issue Form 15CB?',
         answer:
-          'Yes. RJS & Co. can review the transaction and coordinate the documentation needed for outward remittance support.'
+          'Yes. Form 15CB is a Chartered Accountant’s certificate. We review the remittance, issue the certificate and help you file Form 15CA.'
       }
     ]
   },
   {
     slug: 'startup-msme-support',
-    title: 'Startup & MSME Support',
-    shortTitle: 'Startup & MSME',
-    metaTitle: 'Startup and MSME Advisory Services | RJS & Co.',
+    title: 'Startups & MSMEs',
+    shortTitle: 'Startups & MSMEs',
+    metaTitle: 'Finance and Compliance for Startups and MSMEs | RJS & Co.',
     metaDescription:
-      'Startup and MSME support for registrations, accounting setup, GST, ROC compliance, tax planning, payroll, MIS, funding readiness, and Virtual CFO advisory.',
-    excerpt:
-      'Build a cleaner finance and compliance foundation for growth, funding, and day-to-day control.',
+      'Registrations, accounting and GST set-up, compliance calendar, founder tax, payroll, MIS and funding readiness for startups and MSMEs. RJS & Co., Kottayam.',
+    excerpt: 'Set-up, monthly compliance and reporting for founders who want the finance side handled.',
     intro:
-      'Startups and MSMEs need practical finance support that is fast, structured, and founder-friendly. RJS & Co. helps with setup, compliance, accounting, reporting, and advisory as the business grows.',
+      'Founders should spend their time on the business. We set up the accounts, GST, payroll and compliance calendar once, run them each month, and add reporting as you grow.',
     problem:
-      'Many small businesses delay finance systems until compliance problems appear. By then, cleanup costs more than doing it correctly from the start.',
+      'Small businesses often put off finance systems until a notice arrives. By then, the clean-up costs more than doing it properly would have.',
     whoFor: [
       'Early-stage startups',
-      'MSMEs formalising accounts and compliance',
-      'Founder-led businesses preparing for funding or bank finance',
-      'Growing businesses needing monthly finance visibility'
+      'MSMEs formalising their accounts and compliance',
+      'Founder-led businesses preparing for funding or a bank loan',
+      'Growing businesses that need monthly numbers'
     ],
     helpsWith: [
-      'Udyam and startup-related registration support',
-      'Accounting and GST process setup',
-      'Monthly compliance calendar',
-      'Tax planning and founder compensation review',
-      'MIS, cash flow, and funding-readiness support',
-      'Payroll and vendor documentation discipline'
+      'Udyam, DPIIT and startup registrations',
+      'Accounting and GST set-up',
+      'A monthly compliance calendar',
+      'Founder tax and compensation planning',
+      'MIS, cash flow and funding readiness',
+      'Payroll and vendor documentation'
     ],
     benefits: [
-      'Cleaner compliance from the beginning',
-      'Reduced founder distraction',
-      'Better readiness for banks, investors, and grants',
-      'Clear monthly visibility on profit and cash flow',
-      'Scalable finance process as the business grows'
+      'A map of the registrations and filings your business needs',
+      'Accounting, GST and payroll set up and running',
+      'A monthly compliance tracker',
+      'A monthly profit and cash report'
     ],
     process: [
-      'Understand business stage, revenue model, funding plans, and compliance gaps',
-      'Map required registrations and filings',
-      'Set up accounting, GST, payroll, and reporting rhythm',
-      'Prepare monthly review and compliance tracker',
-      'Improve controls and reports as the business scales'
+      'We review your stage, revenue model, funding plans and compliance gaps',
+      'We map the registrations and filings you need',
+      'We set up accounting, GST, payroll and a reporting routine',
+      'We run a monthly review and compliance tracker',
+      'We add controls and reports as you scale'
     ],
     documents: [
       'Founder KYC documents',
-      'Entity registration documents, if available',
+      'Entity registration documents',
       'Bank statements and invoices',
-      'GST details, if registered',
+      'GST details',
       'Payroll and vendor details',
-      'Funding or loan documents, if applicable'
+      'Funding or loan documents'
     ],
-    turnaround: 'Initial setup depends on business stage and pending compliance. Monthly support can follow a structured calendar.',
+    turnaround: 'Set-up depends on your stage and any pending compliance. Monthly support then follows a fixed calendar.',
     faqs: [
       {
-        question: 'Can you help a startup before incorporation?',
+        question: 'Can you help before we incorporate?',
         answer:
-          'Yes. Early guidance helps founders choose the right structure, understand compliance costs, and avoid ownership or tax confusion later.'
+          'Yes, and that is the best time. Early advice settles the structure, the compliance cost and the ownership split before they become hard to change.'
       },
       {
-        question: 'What is the biggest finance mistake startups make?',
+        question: 'What finance mistake do startups make most?',
         answer:
-          'They often mix personal and business money, delay bookkeeping, ignore compliance calendars, and try to recreate records only when filing deadlines arrive.'
+          'Mixing personal and business money, putting off bookkeeping, and rebuilding records the week a filing is due.'
       },
       {
         question: 'Do MSMEs need monthly reporting?',
         answer:
-          'Yes. Even simple monthly reports can show cash flow pressure, receivable delays, margin problems, and tax obligations before they become urgent.'
+          'Yes. A two-page monthly report shows cash pressure, slow collections, thin margins and upcoming tax before any of them becomes urgent.'
       }
     ]
   }
@@ -683,29 +660,28 @@ export const services = [
 
 export const serviceCategories = [
   {
-    name: 'Setup & Structuring',
-    description: 'Choose the right business structure and start with clean compliance foundations.',
-    slugs: ['business-setup', 'startup-msme-support']
-  },
-  {
-    name: 'Tax & Compliance',
-    description: 'Stay on top of income tax, GST, ROC, MCA, and routine regulatory obligations.',
-    slugs: ['taxation-services', 'gst-indirect-tax', 'roc-compliance']
-  },
-  {
     name: 'Audit & Assurance',
-    description: 'Improve audit readiness, documentation, reconciliations, and internal controls.',
+    description: 'Statutory, tax and internal audit.',
     slugs: ['audit-assurance']
   },
   {
-    name: 'Growth & Advisory',
-    description: 'Strengthen accounting, payroll, reporting, cash flow, and management decisions.',
-    slugs: ['accounting-bookkeeping', 'payroll-hr-compliance', 'virtual-cfo-advisory']
+    name: 'Tax',
+    description: 'Income tax, GST, notices and assessments.',
+    slugs: ['taxation-services', 'gst-indirect-tax']
   },
   {
-    name: 'Specialized Desks',
-    description: 'Focused assistance for NRI tax, repatriation, DTAA, and cross-border Indian tax matters.',
+    name: 'Company Law',
+    description: 'MCA filings, board records and new entities.',
+    slugs: ['roc-compliance', 'business-setup']
+  },
+  {
+    name: 'Accounts & Advisory',
+    description: 'Books, payroll, reporting and cash.',
+    slugs: ['accounting-bookkeeping', 'payroll-hr-compliance', 'virtual-cfo-advisory', 'startup-msme-support']
+  },
+  {
+    name: 'NRI Desk',
+    description: 'Indian tax for clients who live abroad.',
     slugs: ['nri-taxation']
   }
 ];
-

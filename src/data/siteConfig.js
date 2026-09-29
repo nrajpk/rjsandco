@@ -2,38 +2,40 @@ export const siteConfig = {
   firmName: 'RJS & Co.',
   legalName: 'RJS & Co.',
   domain: 'https://rjsandco.in',
-  tagline: 'Chartered Accountants, Tax Consultants and Business Advisors',
+  tagline: 'Chartered Accountants',
   description:
-    'RJS & Co. provides audit, taxation, GST, accounting, ROC compliance, business setup, payroll, Virtual CFO, NRI taxation, and advisory support for Indian businesses, startups, MSMEs, professionals, and NRIs.',
-  address: '2nd Floor, Ashir Bhavan Lane, P. C. Chambers, Banerji Road, Kacheripady, Ernakulam - 682018',
-  city: 'Ernakulam',
+    'RJS & Co. is a firm of Chartered Accountants in Kottayam, Kerala. Statutory and tax audit, income tax, GST, company law, accounting, payroll, Virtual CFO and NRI taxation.',
+  address: 'KMC XIII/1259 [CSI MSB-IIf-10], 2nd Floor, CSI Multistoried Building, Kottayam, Kerala, India',
+  addressLines: ['KMC XIII/1259 [CSI MSB-IIf-10]', '2nd Floor, CSI Multistoried Building', 'Kottayam, Kerala, India'],
+  city: 'Kottayam',
   state: 'Kerala',
-  postalCode: '682018',
+  postalCode: '',
   country: 'India',
-  phone: '[Phone Number Placeholder]',
-  phoneHref: 'tel:+910000000000',
   email: 'info@rjsllp.com',
   emailHref: 'mailto:info@rjsllp.com',
   whatsappNumber: '971551070078',
   whatsappLabel: '+971 55 107 0078',
-  mapLabel: 'Open RJS & Co. on Google Maps',
-  mapHref: 'https://maps.app.goo.gl/Dwv51ejpE7YBj5q37',
+  mapLabel: 'Open in Google Maps',
+  mapHref: 'https://www.google.com/maps/search/?api=1&query=CSI%20Multistoried%20Building%2C%20Kottayam%2C%20Kerala',
   mapEmbedHref:
-    'https://www.google.com/maps?q=2nd%20Floor%2C%20Ashir%20Bhavan%20Lane%2C%20P.%20C.%20Chambers%2C%20Banerji%20Road%2C%20Kacheripady%2C%20Ernakulam%20682018&output=embed',
+    'https://www.google.com/maps?q=CSI%20Multistoried%20Building%2C%20Kottayam%2C%20Kerala&output=embed',
   consultationPath: '/contact',
   copyrightStartYear: '2026',
   externalLinks: [
-    { label: 'Income Tax Portal', href: 'https://www.incometax.gov.in/' },
-    { label: 'GST Portal', href: 'https://www.gst.gov.in/' },
-    { label: 'MCA Portal', href: 'https://www.mca.gov.in/' }
+    { label: 'Income Tax portal', href: 'https://www.incometax.gov.in/' },
+    { label: 'GST portal', href: 'https://www.gst.gov.in/' },
+    { label: 'MCA portal', href: 'https://www.mca.gov.in/' }
   ]
 };
 
+export const whatsappHref = `https://wa.me/${siteConfig.whatsappNumber}?text=${encodeURIComponent(
+  'Hello RJS & Co., I would like to discuss a tax or compliance matter.'
+)}`;
+
 export const navLinks = [
-  { label: 'Home', path: '/' },
-  { label: 'About', path: '/about' },
-  { label: 'Services', path: '/services' },
-  { label: 'Industries', path: '/industries' },
-  { label: 'Resources', path: '/resources' },
+  { label: 'Practice', path: '/services' },
+  { label: 'Who we act for', path: '/industries' },
+  { label: 'The firm', path: '/about' },
+  { label: 'Insights', path: '/resources' },
   { label: 'Contact', path: '/contact' }
 ];

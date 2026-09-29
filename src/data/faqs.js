@@ -1,28 +1,27 @@
 export const generalFaqs = [
   {
-    question: 'Can RJS & Co. handle both tax filing and business compliance?',
+    question: 'Can one firm handle our audit, tax and company filings together?',
     answer:
-      'Yes. The firm is structured to support routine tax filing, GST, accounting, payroll, ROC compliance, audit coordination, and advisory requirements through one professional engagement model.'
+      'Yes. Audit, income tax, GST, ROC, payroll and advisory can sit under one engagement letter, with one partner responsible for the whole.'
   },
   {
-    question: 'Do I need a Chartered Accountant if my business is still small?',
+    question: 'We are a small business. Do we need a Chartered Accountant yet?',
     answer:
-      'Yes, if you want fewer compliance surprises. Early accounting discipline helps with GST, income tax, cash flow, funding discussions, audit readiness, and avoiding avoidable penalties.'
+      'If you want fewer surprises, yes. Books kept properly from the start make GST, income tax, a bank loan and an eventual audit far easier.'
   },
   {
-    question: 'Can the firm support startups and MSMEs remotely?',
+    question: 'Can you work with us if we are not in Kottayam?',
     answer:
-      'Yes. Most documentation, accounting review, tax planning, and compliance discussions can be handled through email, phone, video calls, and secure document sharing.'
+      'Yes. We handle most engagements over email, phone and video, and collect documents through a channel we agree with you.'
   },
   {
-    question: 'Are consultation fees fixed?',
+    question: 'How do you charge?',
     answer:
-      'Routine services can usually be quoted on a fixed-fee basis after understanding the scope. Advisory, notice handling, audit, and complex matters may require a separate estimate.'
+      'Routine work is quoted as a fixed fee once we understand the scope. Audits, notices and advisory work are estimated separately after a first review.'
   },
   {
-    question: 'What should I prepare before contacting the firm?',
+    question: 'What should I send before our first call?',
     answer:
-      'Share your business type, current compliance status, GST or company registration details if available, the issue you need help with, and any notice, filing deadline, or document already received.'
+      'The type of entity, what the matter is, any deadline, and copies of any notice or document you have received. Hold back sensitive records until we agree how to share them.'
   }
 ];
-
