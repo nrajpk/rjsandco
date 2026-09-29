@@ -71,7 +71,8 @@ export default function Home() {
       <Sheet page={1} total={TOTAL} label="Opinion">
         <div className="opinion">
           <p className="clause__note" aria-hidden="true">
-            Opinion
+            <span className="clause__num">1</span>
+            <small>Opinion</small>
           </p>
           <div>
             <p className="opinion__addressee">
@@ -116,9 +117,8 @@ export default function Home() {
       </Sheet>
 
       <Sheet page={2} total={TOTAL} label="Basis for our opinion">
-        <Clause note="Basis for our opinion" quietOnMobile>
-          <p className="statement">How we work, and what you can hold us to.</p>
-          <ol className="paras" style={{ marginTop: 36 }}>
+        <Clause num="2" title="How we work, and what you can hold us to." sub="Basis for our opinion">
+          <ol className="paras" style={{ marginTop: 8 }}>
             {basis.map((item) => (
               <li key={item.ref} data-ref={item.ref}>
                 <div>

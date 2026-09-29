@@ -143,7 +143,7 @@ export default function ServiceDetail() {
             </Link>
             <a className="text-link" href={whatsappHref} target="_blank" rel="noreferrer">
               <WhatsAppIcon />
-              WhatsApp us
+              Message the Support Desk
             </a>
             <p>
               <strong style={{ color: 'var(--navy)', fontWeight: 600 }}>Timing.</strong> {service.turnaround}
