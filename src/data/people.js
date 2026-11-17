@@ -9,7 +9,8 @@
 //             (null falls back to the firm's Support Desk number)
 //   email     null falls back to the firm's email
 //   linkedin  full profile URL, e.g. 'https://www.linkedin.com/in/name'
-//   photo     square portrait in public/people/, e.g. '/people/rijo-pt.jpg'
+//   photo     square JPEG portrait in public/people/, e.g. '/people/rijo-pt.jpg'
+//             (JPEG so it can also go into the saved contact; about 480px is enough)
 //             (null shows the person's initials)
 //   office    'Ernakulam' | 'Kottayam' | 'Pathanamthitta' (see siteConfig.offices)
 export const people = [
@@ -22,7 +23,7 @@ export const people = [
     whatsapp: '971551070078',
     email: 'johnmon@rjsandco.in',
     linkedin: 'https://www.linkedin.com/in/johnmon-xavier-0475051a/',
-    photo: '/people/johnmon-xavier.webp',
+    photo: '/people/johnmon-xavier.jpg',
     office: 'Kottayam'
   },
   {

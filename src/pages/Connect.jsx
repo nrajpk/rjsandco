@@ -4,6 +4,7 @@ import caIndia from '../assets/ca-india.webp';
 import mark from '../assets/logo-header.webp';
 import SEO from '../components/SEO.jsx';
 import { findPerson } from '../data/people.js';
+import { vcfPath } from '../data/vcard.js';
 import { officeMapHref, siteConfig } from '../data/siteConfig.js';
 import '../styles/connect.css';
 
@@ -12,7 +13,6 @@ import '../styles/connect.css';
 // /connect/<slug>   one person's card (src/data/people.js)
 
 const digits = (value) => String(value || '').replace(/\D/g, '');
-const vEscape = (value) => String(value).replace(/([\\;,])/g, '\\$1').replace(/\n/g, '\\n');
 
 const icons = {
   phone:
@@ -38,24 +38,6 @@ function Icon({ name }) {
 function initialsOf(name) {
   const words = name.replace(/^CA\s+/i, '').replace(/[^A-Za-z\s]/g, '').split(/\s+/).filter(Boolean);
   return (words[0]?.[0] || '') + (words.length > 1 ? words[words.length - 1][0] : '');
-}
-
-function buildVCard({ person, office, email, pageUrl }) {
-  const name = person ? person.name : siteConfig.firmName;
-  const lines = [
-    'BEGIN:VCARD',
-    'VERSION:3.0',
-    `N:${vEscape(name)};;;;`,
-    `FN:${vEscape(name)}`,
-    `ORG:${vEscape(`${siteConfig.firmName}, ${siteConfig.tagline}`)}`,
-    person?.role && `TITLE:${vEscape([person.role, person.qualifications].filter(Boolean).join(', '))}`,
-    (person?.phone || person?.whatsapp) && `TEL;TYPE=CELL,VOICE:+${digits(person.phone || person.whatsapp)}`,
-    `EMAIL;TYPE=WORK:${email}`,
-    office && `ADR;TYPE=WORK:;;${vEscape(office.lines.join(', '))};${vEscape(office.city)};${siteConfig.state};;${siteConfig.country}`,
-    `URL:${pageUrl}`,
-    'END:VCARD'
-  ];
-  return lines.filter(Boolean).join('\r\n');
 }
 
 function Shell({ children }) {
@@ -99,9 +81,7 @@ export default function Connect() {
   const email = person?.email || siteConfig.email;
   const whatsapp = person?.whatsapp || siteConfig.whatsappNumber;
   const path = person ? `/connect/${person.slug}` : '/connect';
-  const pageUrl = `${window.location.origin}${path}`;
   const name = person ? person.name : siteConfig.firmName;
-  const vcard = buildVCard({ person, office, email, pageUrl });
   const greeting = `Hello ${name},`;
   const site = siteConfig.domain.replace(/^https?:\/\//, '');
 
@@ -189,8 +169,7 @@ export default function Connect() {
 
       <a
         className="cc-save"
-        href={`data:text/vcard;charset=utf-8,${encodeURIComponent(vcard)}`}
-        download={`${person?.slug || 'rjs-and-co'}.vcf`}
+        href={vcfPath(person)}
       >
         Save Contact
       </a>
