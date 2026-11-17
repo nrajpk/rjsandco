@@ -12,6 +12,7 @@ import '../styles/connect.css';
 // /connect          the firm's card
 // /connect/<slug>   one person's card (src/data/people.js)
 
+const isIOS = typeof navigator !== 'undefined' && /iPhone|iPad|iPod/.test(navigator.userAgent);
 const digits = (value) => String(value || '').replace(/\D/g, '');
 
 const icons = {
@@ -173,6 +174,7 @@ export default function Connect() {
       >
         Save Contact
       </a>
+      {isIOS && <p className="cc-hint">On iPhone, scroll to the bottom of the contact and tap Create New Contact.</p>}
 
       <ul className="cc-rows">
         {rows.map((row) => {

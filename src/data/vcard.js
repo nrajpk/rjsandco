@@ -49,7 +49,8 @@ export function buildVCard(person, photoBase64 = null) {
     office &&
       `ADR;TYPE=WORK:;;${esc(office.lines.join(', '))};${esc(office.city)};${siteConfig.state};;${siteConfig.country}`,
     `URL:${url}`,
-    person?.linkedin && `X-SOCIALPROFILE;TYPE=linkedin:${person.linkedin}`,
+    person?.linkedin &&
+      `X-SOCIALPROFILE;type=linkedin;x-user=${person.linkedin.replace(/\/$/, '').split('/').pop()}:${person.linkedin}`,
     photoBase64 && `PHOTO;ENCODING=b;TYPE=JPEG:${photoBase64}`,
     'END:VCARD'
   ]

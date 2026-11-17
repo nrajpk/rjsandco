@@ -208,6 +208,14 @@
   transform: scale(0.985);
 }
 
+.cc-hint {
+  margin: -6px 0 18px;
+  font-size: 0.875rem;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.72);
+  text-wrap: balance;
+}
+
 /* Rows */
 
 .cc-rows {
