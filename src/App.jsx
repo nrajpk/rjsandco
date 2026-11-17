@@ -13,6 +13,7 @@ import Disclaimer from './pages/Disclaimer.jsx';
 import NotFound from './pages/NotFound.jsx';
 import Letterhead from './pages/Letterhead.jsx';
 import Connect from './pages/Connect.jsx';
+import PrintCard from './pages/PrintCard.jsx';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -31,6 +32,9 @@ export default function App() {
       <Routes>
         {/* Internal tool, outside the site chrome so only the sheet prints. */}
         <Route path="rjs/letterhead" element={<Letterhead />} />
+        {/* Internal tool: printable business card with the QR to /connect/<slug>. */}
+        <Route path="rjs/card" element={<PrintCard />} />
+        <Route path="rjs/card/:slug" element={<PrintCard />} />
         {/* Digital business cards behind the QR codes; people live in src/data/people.js. */}
         <Route path="connect" element={<Connect />} />
         <Route path="connect/:slug" element={<Connect />} />
